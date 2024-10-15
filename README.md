@@ -13,6 +13,5 @@ WIP
 
 ## To-Do / Roadmap
 
-- [] Implement basic navbar routing and respective tests
-- [] Implement hero section
-
+- [ ] Implement basic navbar routing and respective tests
+- [ ] Implement hero section

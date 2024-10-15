@@ -5,7 +5,6 @@ function App() {
     <div>
       <header>
         <a
-          className="App-link"
           href="https://www.celfcentrodeformacao.com/"
           target="_blank"
           rel="noopener noreferrer"
