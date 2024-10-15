@@ -11,3 +11,4 @@ public/
 # Ignore specific files
 .env
 .env.local
+.yml
