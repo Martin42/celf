@@ -1,19 +1,7 @@
 import "./App.scss";
 
 function App() {
-  return (
-    <div>
-      <header>
-        <a
-          href="https://www.celfcentrodeformacao.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WIP for CELF
-        </a>
-      </header>
-    </div>
-  );
+  return <div>WIP</div>;
 }
 
 export default App;
