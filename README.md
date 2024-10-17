@@ -13,5 +13,7 @@ WIP
 
 ## To-Do / Roadmap
 
-- [ ] Implement basic navbar routing and respective tests
+- [x] Implement basic navbar routing and respective tests
 - [ ] Implement hero section
+
+- [ ] Implement basic animations fade in with keyframes (Different timings for different sections)
