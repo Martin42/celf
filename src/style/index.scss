@@ -1,14 +1,29 @@
 @use 'variables' as *;
 
 body {
-    margin: 0 2rem;
+    margin: 0;
     font-family: $font-family;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
   
+  // Animations for main container
+
+  // .main-container{
+  //   transition: all 0.5s ease;
+  //   animation: appear 0.5s;
+  // }
+
+  // @keyframes appear {
+  //   from{
+  //     opacity: 0;
+  //   }
+  //   to{
+  //     opacity: 1;
+  //   }
+  // }

@@ -1,0 +1,115 @@
+@use 'variables' as *;
+
+.header-container{
+    padding: 2rem 3.25rem 2rem 3.25rem;
+    transition: all 0.3s ease;
+    &.open{
+        background-color: $color-secondary;
+        transition: all 0.3s ease;
+    }
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-properties { 
+    height: 2.625rem;
+    width: auto;
+    transition: all 0.2s ease;
+    &.open {
+        filter: grayscale(100%) brightness(300%); 
+    }
+}
+
+// Hamburger Menu
+
+.svg-properties{
+    width:auto;
+    height:20px;
+    fill:none;
+    display: flex;
+}
+
+.svg-line-path{
+    stroke: black;
+    stroke-width: 3.6;
+    stroke-linecap: round;
+    transition: all 0.5s ease;
+    &.top.open{
+        transform: translate(4px, -1px) rotate(45deg);
+        stroke: white;
+    }
+
+    &.middle.open{
+        opacity: 0;
+    }
+
+    &.bottom.open{
+        transform: translate(-10px, 6.5px) rotate(-45deg);
+        stroke: white;
+    }
+}
+
+.link-svg-properties{
+    width: 21px;
+    height: 21px;
+    fill: none;
+}
+
+// Navigation Properties
+
+.nav-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation: slideUp 0.3s;
+    margin-top: $spacing-lg;
+    gap: $spacing-lg;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: $font-size-lg;
+    }
+
+    &.open {
+        display: flex;
+        animation: slideDown 0.3s;
+    }
+}
+
+.nav-group{
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+}
+
+// Animations
+
+@keyframes slideDown {
+    from { 
+        display: none;
+        opcaity: 0;
+    }
+
+    to {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        display: flex;
+        opacity: 1;
+    }
+
+    to {
+        display: none;
+        opcaity: 0;
+
+    }
+}
+
