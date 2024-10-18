@@ -3,6 +3,7 @@
 version: 2.1
 orbs:
   node: circleci/node@5
+
 jobs:
   test-node:
     # Install node dependencies and run tests
@@ -14,6 +15,7 @@ jobs:
       - run:
           name: Run tests
           command: npm test --passWithNoTests
+
   build-node:
     # Build node project
     executor: node/default
@@ -33,15 +35,7 @@ jobs:
       - store_artifacts:
           path: ~/artifacts
           destination: node-build
-  # deploy:
-  # This is an example deploy job, not actually used by the workflow
-  # docker:
-  #   - image: cimg/base:stable
-  # steps:
-  # Replace this with steps to deploy to users
-  # - run:
-  #     name: deploy
-  #     command: '#e.g. ./deploy.sh'
+
 workflows:
   version: 2
   build-and-test:
@@ -50,21 +44,11 @@ workflows:
           filters:
             branches:
               only:
-                - master # Run tests on the master branch
-                - /feature-.*$/ # Run tests on branches that start with 'feature-'
+                - master # Run tests on the master branch only
       - build-node:
           requires:
             - test-node
           filters:
             branches:
               only:
-                - master # Build only runs on master
-
-
-      # - deploy:
-      #     requires:
-      #       - build-node
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
+                - master # Build only runs on the master branch
