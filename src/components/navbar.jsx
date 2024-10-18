@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <div className={`header-container ${isNavOpen ? "open" : ""}`}>
-      <div className="logo-container">
+      <div className={`logo-container ${isNavOpen ? "open" : ""}`}>
         <Link to={"/"}>
           <img
             src={logo}
