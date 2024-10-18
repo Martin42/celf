@@ -1,0 +1,76 @@
+@use "variables" as *;
+
+// Mixins
+
+@mixin reset-margin {
+    margin: 0;
+}
+
+// Base Styles
+
+h1 {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    @include reset-margin; 
+}
+
+p{
+    font-weight: $font-weight-light;
+    @include reset-margin; 
+}
+
+// Hero 
+
+$hero-background-url: "../assets/hero-mobile-bg.png";
+$hero-background-overlay:  rgba(33, 33, 33, 0.45);
+
+.hero-container{
+    background: linear-gradient($hero-background-overlay, $hero-background-overlay), url($hero-background-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    height: 25rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content{
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    gap: $spacing-md;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+}
+
+// About
+
+.about-container{
+    margin: $spacing-xxl 2rem;
+
+    h1{
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        margin-bottom: $spacing-md;
+    }
+
+    p{
+        text-indent: 20px;
+        line-height: 20px;
+        &:not(:last-child){
+            margin-bottom: $spacing-xs;
+        }
+    }
+
+    span{
+        font-weight: $font-weight-normal;
+    }
+}

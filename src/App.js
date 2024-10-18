@@ -1,7 +1,12 @@
 import "./App.scss";
+import { Hero } from "./components/hero";
 
 function App() {
-  return <div>WIP</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 }
 
 export default App;
