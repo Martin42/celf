@@ -15,9 +15,11 @@ WIP
 
 - [x] Implement basic navbar routing and respective tests
 - [x] Implement hero section
-- [ ] Implement "Services" section
+- [x] Implement "Services" section
+- [ ] Implement "FAQ" section
+- [ ] Implement "Where to find us" Section
+- [ ] Implement Footer
 
-### Future Implementation
+### Technical Aspects
 
-- [ ] Implement basic animations with framer motion
 - [ ] Implement tests for hero section
