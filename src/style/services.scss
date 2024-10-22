@@ -1,0 +1,56 @@
+@use "variables" as *;
+
+.services-container{
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xl;
+    h1 {
+        color: $color-terciary;
+        font-size: $font-size-xl;
+    }
+
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    padding: 2.5rem;
+    margin: 0 $spacing-lg;
+    gap: $spacing-lg;
+    border-radius: $border-radius-large;
+    box-shadow: $box-shadow
+}
+
+.card-svg{
+    filter: drop-shadow(-2px 1px 2.5px rgba(212, 54, 80, 0.40));
+}
+
+.card-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-sm;
+    background: none;
+    border: none;
+    color: $color-primary;
+    font-weight: $font-weight-bold;
+
+}
+
+.card-title{
+    text-align: center;
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+}
+
+.card-subtitle{
+    text-align: center;
+    font-weight: $font-weight-light;
+}
+

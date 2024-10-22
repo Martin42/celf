@@ -4,18 +4,19 @@
 
 $color-primary: #D43650;
 $color-secondary: #0056A5;
+$color-terciary: #767474;
 $color-footer: #BEBEBE;
 
 // Font Variables
 
 $font-family: 'Helvetica';
 
-$font-size-xs: 12px;
-$font-size-sm: 14px;
-$font-size-base: 16px;
-$font-size-lg: 20px;
-$font-size-xl: 24px;
-$font-size-xxl: 36px;
+$font-size-xs: 0.75rem;   // 12px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-base: 1rem;    // 16px (default base font size)
+$font-size-lg: 1.25rem;   // 20px
+$font-size-xl: 1.5rem;    // 24px
+$font-size-xxl: 2.25rem;  // 36px
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
@@ -36,6 +37,12 @@ $border-radius-base: 6px;
 $border-radius-large: 12px;
 $box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.06);
 
+// Breakpoints
+
+$breakpoint-xs: 480px;   // Mobile portrait
+$breakpoint-sm: 768px;   // Tablet
+$breakpoint-md: 1024px;  // Small desktop
+$breakpoint-lg: 1200px;  // Large desktop
 
 
 

@@ -7,3 +7,18 @@
     border: 2px solid white;
     border-radius: 6px;
 }
+
+.trigger-button{
+    border: none;
+    background: none;
+}
+
+.red-button{
+    background: $color-primary;
+    color: white;
+    width: max-content;
+    border-radius: $border-radius-base;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    box-shadow: $box-shadow;
+} 
