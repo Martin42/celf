@@ -4,7 +4,7 @@ import "../style/services.scss";
 export const Services = () => {
   return (
     <div className="services-container">
-      <h1 className="services-title">OS NOSSOS SERVIÇOS</h1>
+      <h1>OS NOSSOS SERVIÇOS</h1>
       {/* FORMACAO */}
       <div className="card-container">
         <svg
