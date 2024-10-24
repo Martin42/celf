@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/findUs.scss";
 import { EmblaCarousel } from "./Carousel/EmblaCarousel";
+import { Footer } from "./footer";
 
 export const FindUs = () => {
   return (
@@ -11,6 +12,7 @@ export const FindUs = () => {
 
       {/* Carousel here */}
       <EmblaCarousel />
+      <Footer />
     </div>
   );
 };

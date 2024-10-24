@@ -5,18 +5,18 @@
 $color-primary: #d43650;
 $color-secondary: #0056a5;
 $color-terciary: #767474;
-$color-footer: #bebebe;
+$color-footer: #2c2f34;
 
 // Font Variables
 
 $font-family: "Helvetica";
 
-$font-size-xs: 0.75rem; // 12px
-$font-size-sm: 0.875rem; // 14px
-$font-size-base: 1rem; // 16px (default base font size)
-$font-size-lg: 1.25rem; // 20px
-$font-size-xl: 1.5rem; // 24px
-$font-size-xxl: 2.25rem; // 36px
+$font-size-xs: clamp(0.75rem, 1vw + 0.5rem, 0.75rem); // 12px
+$font-size-sm: clamp(0.875rem, 1vw + 0.75rem, 0.875rem); // 14px
+$font-size-base: clamp(1rem, 2vw + 0.5rem, 1rem); // 16px
+$font-size-lg: clamp(1.25rem, 2vw + 0.75rem, 1.25rem); // 20px
+$font-size-xl: clamp(1.5rem, 3vw + 1rem, 1.5rem); // 24px
+$font-size-xxl: clamp(2.25rem, 4vw + 1rem, 2.25rem); // 36px
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
