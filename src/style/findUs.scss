@@ -1,11 +1,12 @@
 @use "variables" as *;
 
-$findUs-background-url: "../assets/findUs-mobile-bg.png";
+$findUs-mobile-background-url: "../assets/findUs-mobile-bg.png";
+$findUs-tablet-background-url: "../assets/findUs-tablet-bg.png";
 
 $height: 25rem;
 
 .findUs-container {
-  background: url($findUs-background-url);
+  background: url($findUs-mobile-background-url);
   background-repeat: no-repeat;
   background-size: cover;
   height: $height;
@@ -88,5 +89,13 @@ $height: 25rem;
 @media (max-width: 375px) {
   .embla__slide p.findUs-text.email {
     font-size: $font-size-xs;
+  }
+}
+
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+  .findUs-container {
+    background: url($findUs-tablet-background-url);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
