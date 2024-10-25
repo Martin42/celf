@@ -41,7 +41,9 @@ export function EmblaCarousel() {
 
             <div>
               <p>Email</p>
-              <p className="findUs-text">geral@celfcentrodeformacao.com</p>
+              <p className="findUs-text email">
+                geral@celfcentrodeformacao.com
+              </p>
             </div>
 
             <div>

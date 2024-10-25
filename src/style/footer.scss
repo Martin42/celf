@@ -55,8 +55,28 @@
 // Copyright
 
 .copyright-container {
+  display: flex;
+  justify-content: center;
   border-top: 1px solid #4d4e4f;
   margin: 0 2rem;
   text-align: center;
   padding: 0.5rem 0;
+}
+
+// Media Queries
+
+@media (max-width: 375px) {
+  .footer-logo-properties {
+    height: 1.25rem;
+    width: auto;
+  }
+}
+
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+  .footer-logo-properties {
+    height: 2rem;
+  }
+  .footer-logo-container {
+    gap: $spacing-xl;
+  }
 }

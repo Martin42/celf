@@ -84,3 +84,9 @@ $height: 25rem;
     }
   }
 }
+
+@media (max-width: 375px) {
+  .embla__slide p.findUs-text.email {
+    font-size: $font-size-xs;
+  }
+}

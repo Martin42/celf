@@ -109,7 +109,7 @@ export const Footer = () => {
       </div>
 
       <div className="copyright-container">
-        <p>© CELF, All Rights Reserved</p>
+        <p>© 2024 CELF, All Rights Reserved</p>
       </div>
     </footer>
   );
