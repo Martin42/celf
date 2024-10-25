@@ -65,7 +65,7 @@ export const Footer = () => {
                 fill="#989d9e"
               />
             </svg>
-            <p>geral@celfcentrodeformacao.com</p>
+            <p>formacelf@gmail.com</p>
           </div>
 
           <div className="about-content">

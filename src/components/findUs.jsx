@@ -5,6 +5,8 @@ import { Footer } from "./footer";
 import useMediaQuery from "../utils/useMediaQuery";
 
 export const FindUs = () => {
+  //Screen Size Check
+
   const isTablet = useMediaQuery("(max-width: 768px");
 
   return (

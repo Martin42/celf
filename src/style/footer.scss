@@ -34,7 +34,7 @@
 }
 
 .main-footer-container {
-  margin: 0 2rem;
+  margin: $margin-mobile;
   display: flex;
   flex-direction: column;
   gap: $spacing-sm;
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: center;
   border-top: 1px solid #4d4e4f;
-  margin: 0 2rem;
+  margin: $margin-mobile;
   text-align: center;
   padding: 0.5rem 0;
 }

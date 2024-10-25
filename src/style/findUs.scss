@@ -20,7 +20,7 @@ $height: 25rem;
 // Carousel
 
 .carousel-container {
-  margin: 0 2rem;
+  margin: $margin-mobile;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,12 +83,6 @@ $height: 25rem;
       font-size: $font-size-sm;
       font-weight: $font-weight-light;
     }
-  }
-}
-
-@media (max-width: 375px) {
-  .embla__slide p.findUs-text.email {
-    font-size: $font-size-xs;
   }
 }
 
