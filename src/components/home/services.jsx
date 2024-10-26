@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/services.scss";
+import "../../style/homeStyles/services.scss";
 
 export const Services = () => {
   return (

@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../variables" as *;
 
 // Mixins
 
@@ -23,9 +23,9 @@ p {
 }
 
 // Hero
-$hero-background-mobile-url: "../assets/hero-mobile-bg.png";
-$hero-background-tablet-url: "../assets/hero-tablet-bg.png";
-$hero-background-desktop-url: "../assets/hero-desktop-bg.png";
+$hero-background-mobile-url: "../../assets/hero-mobile-bg.png";
+$hero-background-tablet-url: "../../assets/hero-tablet-bg.png";
+$hero-background-desktop-url: "../../assets/hero-desktop-bg.png";
 $hero-background-overlay: rgba(33, 33, 33, 0.45);
 
 .hero-container {
@@ -128,7 +128,7 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
     -webkit-text-stroke-color: black;
     margin-bottom: $spacing-md;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-sm) {
       -webkit-text-stroke-width: 3px;
       margin-bottom: $spacing-lg;
     }
@@ -139,7 +139,7 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
     line-height: 20px;
     font-weight: $font-weight-light;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-sm) {
       font-weight: $font-weight-normal;
       line-height: normal;
     }
@@ -151,7 +151,7 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
   span {
     font-weight: $font-weight-normal;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-sm) {
       font-weight: $font-weight-bold;
     }
   }

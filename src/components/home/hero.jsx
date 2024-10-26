@@ -1,6 +1,6 @@
 import React from "react";
-import "../style/hero.scss";
-import "../style/_buttons.scss";
+import "../../style/homeStyles/hero.scss";
+import "../../style/_buttons.scss";
 
 export const Hero = () => {
   return (

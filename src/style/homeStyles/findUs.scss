@@ -1,7 +1,7 @@
-@use "variables" as *;
+@use "../variables" as *;
 
-$findUs-mobile-background-url: "../assets/findUs-mobile-bg.png";
-$findUs-tablet-background-url: "../assets/findUs-tablet-bg.png";
+$findUs-mobile-background-url: "../../assets/findUs-mobile-bg.png";
+$findUs-tablet-background-url: "../../assets/findUs-tablet-bg.png";
 
 $height: 25rem;
 

@@ -1,8 +1,8 @@
 import "./App.scss";
-import { FAQ } from "./components/faq";
-import { FindUs } from "./components/findUs";
-import { Hero } from "./components/hero";
-import { Services } from "./components/services";
+import { FAQ } from "./components/home/faq";
+import { FindUs } from "./components/home/findUs";
+import { Hero } from "./components/home/hero";
+import { Services } from "./components/home/services";
 
 function App() {
   return (

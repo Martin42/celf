@@ -1,12 +1,11 @@
 import React from "react";
-import "../style/findUs.scss";
-import { EmblaCarousel } from "./Carousel/EmblaCarousel";
-import { Footer } from "./footer";
-import useMediaQuery from "../utils/useMediaQuery";
+import "../../style/homeStyles/findUs.scss";
+import { EmblaCarousel } from "../carousel/EmblaCarousel";
+import { Footer } from "../footer";
+import useMediaQuery from "../../utils/useMediaQuery";
 
 export const FindUs = () => {
   //Screen Size Check
-
   const isTablet = useMediaQuery("(max-width: 768px");
 
   return (
