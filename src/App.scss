@@ -1,7 +1,10 @@
 @use "style/variables" as *;
 
-.main-container{
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-xxl;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xxl;
+  @media (min-width: $breakpoint-md) {
+    gap: $spacing-desktop;
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import "../style/faq.scss";
+import "../../style/homeStyles/faq.scss";
 import Collapsible from "react-collapsible";
-import data from "../data/faq.json";
+import data from "../../data/faq.json";
 
 const trigger = (question) => {
   return (

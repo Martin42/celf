@@ -1,15 +1,17 @@
 import "./App.scss";
-import { FAQ } from "./components/faq";
-import { Hero } from "./components/hero";
-import { Services } from "./components/services";
+import { FAQ } from "./components/home/faq";
+import { FindUs } from "./components/home/findUs";
+import { Hero } from "./components/home/hero";
+import { Services } from "./components/home/services";
 
 function App() {
   return (
-    <div className="main-container">
+    <section className="main-container">
       <Hero />
       <Services />
       <FAQ />
-    </div>
+      <FindUs />
+    </section>
   );
 }
 
