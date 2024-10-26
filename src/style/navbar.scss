@@ -76,7 +76,9 @@
   max-height: 0;
   flex-direction: column;
   align-items: center;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease;
   opacity: 0;
   gap: $spacing-lg;
   a {

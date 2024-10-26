@@ -1,25 +1,25 @@
 [
-    {
-        "id": 0,
-        "question": "Qual é a duração dos cursos financiados?",
-        "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
-    },
+  {
+    "id": 0,
+    "question": "Qual é a duração dos cursos financiados?",
+    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+  },
 
-    {
-        "id": 1,
-        "question": "Que tipo de apoio têm estas formações?",
-        "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
-    },
+  {
+    "id": 1,
+    "question": "Que tipo de apoio têm estas formações?",
+    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+  },
 
-    {
-        "id": 2,
-        "question": "Quem se pode candidatar?",
-        "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
-    },
+  {
+    "id": 2,
+    "question": "Quem se pode candidatar?",
+    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+  },
 
-    {
-        "id": 3,
-        "question": "Como me posso inscrever?",
-        "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
-    }
+  {
+    "id": 3,
+    "question": "Como me posso inscrever?",
+    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+  }
 ]
