@@ -41,7 +41,7 @@ This project includes a comprehensive testing strategy to ensure all interactive
 
 ### Running Tests
 
-- **To run all tests**: `npm test`
+- **To run all tests**: `npm run test`
 - **To run accessibility tests**: `npm run test:accessibility`
 
 ## CI/CD Pipeline
