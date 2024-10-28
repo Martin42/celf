@@ -54,10 +54,6 @@ workflows:
   build-and-test:
     jobs:
       - prettier:
-          filters:
-            branches:
-              only:
-                - master
       - test-node:
           requires:
             - prettier
