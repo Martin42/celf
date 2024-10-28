@@ -1,6 +1,6 @@
 import React from "react";
 import "../../style/homeStyles/findUs.scss";
-import EmblaCarousel from "../carousel/EmblaCarousel";
+import { EmblaCarousel } from "../carousel/EmblaCarousel";
 import { Footer } from "../footer";
 import useMediaQuery from "../../utils/useMediaQuery";
 
