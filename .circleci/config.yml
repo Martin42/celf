@@ -31,6 +31,9 @@ jobs:
     executor: node/default
     steps:
       - checkout
+      - run:
+        name: Clear npm cache
+        command: npm cache clean --force
       - node/install-packages:
           pkg-manager: npm
       - run:
