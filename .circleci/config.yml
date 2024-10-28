@@ -56,6 +56,8 @@ workflows:
               only:
                 - master
       - test-node:
+          requires:
+            - prettier
           filters:
             branches:
               only:
