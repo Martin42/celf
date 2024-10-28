@@ -46,26 +46,20 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-      $hero-background-overlay,
-      $hero-background-overlay
-    ),
+  background:
+    linear-gradient($hero-background-overlay, $hero-background-overlay),
     url($hero-background-mobile-url) no-repeat center center;
 
   @media (min-width: $breakpoint-xs) {
-    background: linear-gradient(
-        $hero-background-overlay,
-        $hero-background-overlay
-      ),
+    background:
+      linear-gradient($hero-background-overlay, $hero-background-overlay),
       url($hero-background-tablet-url) no-repeat center center;
     background-size: cover;
   }
 
   @media (min-width: $breakpoint-lg) {
-    background: linear-gradient(
-        $hero-background-overlay,
-        $hero-background-overlay
-      ),
+    background:
+      linear-gradient($hero-background-overlay, $hero-background-overlay),
       url($hero-background-desktop-url) no-repeat center center;
     background-size: cover;
   }
