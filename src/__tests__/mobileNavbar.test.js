@@ -1,6 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
 import { Navbar } from "../components/navbar";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { mockMatchMedia, resetMatchMedia } from "../utils/testUtils";
 
 // Utility function to toggle navigation menu
 const openMenu = () => {
@@ -9,6 +10,14 @@ const openMenu = () => {
 };
 
 describe("Navbar Component", () => {
+  beforeAll(() => {
+    mockMatchMedia(768);
+  });
+
+  afterAll(() => {
+    resetMatchMedia();
+  });
+
   it("should render the logo and the hamburger icon", () => {
     render(
       <MemoryRouter>

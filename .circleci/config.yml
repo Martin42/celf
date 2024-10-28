@@ -5,6 +5,16 @@ orbs:
   node: circleci/node@5
 
 jobs:
+  prettier:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Check Prettier
+          command: npm run prettier
+
   test-node:
     # Install node dependencies and run tests
     executor: node/default
@@ -40,6 +50,11 @@ workflows:
   version: 2
   build-and-test:
     jobs:
+      - prettier:
+          filters:
+            branches:
+              only:
+                - master
       - test-node:
           filters:
             branches:
