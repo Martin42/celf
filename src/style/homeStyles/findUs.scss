@@ -2,19 +2,97 @@
 
 $findUs-mobile-background-url: "../../assets/findUs-mobile-bg.png";
 $findUs-tablet-background-url: "../../assets/findUs-tablet-bg.png";
+$findUs-desktop-background-url: "../../assets/findUs-desktop-bg.png";
+$findUs-background-overlay: rgba(33, 33, 33, 0.2);
 
 $height: 25rem;
+$desktop-height: 28rem;
 
-.findUs-container {
-  background: url($findUs-mobile-background-url);
+@mixin background-image($url) {
+  background: linear-gradient(
+      $findUs-background-overlay,
+      $findUs-background-overlay
+    ),
+    url($url);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.findUs-container {
+  @include background-image($findUs-mobile-background-url);
   height: $height;
   width: auto;
+
+  @media (min-width: $breakpoint-xs) {
+    @include background-image($findUs-tablet-background-url);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    height: $desktop-height;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    @include background-image($findUs-desktop-background-url);
+  }
 }
 
 .hidden-container {
   height: calc($height / 2);
+
+  @media (min-width: $breakpoint-md) {
+    height: calc($desktop-height / 1.5);
+  }
+}
+
+// Laptop-Desktop Classes
+
+.desktop-findUs-container {
+  display: flex;
+  justify-content: center;
+  margin: $margin-laptop;
+  @media (min-width: $breakpoint-lg) {
+    margin: $margin-desktop;
+  }
+}
+
+.desktop-findUs-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $desktop-height;
+  background-color: white;
+  padding: 3rem;
+  width: 24.5rem;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-base 0 0 $border-radius-base;
+  gap: $spacing-md;
+  h1 {
+    font-size: $font-size-xl;
+    color: $color-terciary;
+  }
+
+  p {
+    margin: 0;
+    &:not(.findUs-text) {
+      margin-bottom: $spacing-xs;
+      font-weight: $font-weight-bold;
+    }
+
+    &.findUs-text {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.desktop-findUs-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.map-image {
+  width: 24.5rem;
+  box-shadow: $box-shadow;
 }
 
 // Carousel
@@ -42,54 +120,47 @@ $height: 25rem;
   gap: $spacing-xs;
 }
 
+.dot,
 .selected-dot {
   height: 8px;
   width: 8px;
-  background-color: #2f83cf;
   border-radius: 8px;
 }
 
+.selected-dot {
+  background-color: #2f83cf;
+}
+
 .dot {
-  height: 8px;
-  width: 8px;
   background-color: #b9b9b9;
-  border-radius: 8px;
 }
 
 // Embla
 
 .embla {
   overflow: hidden;
-}
 
-.embla__container {
-  display: flex;
-}
-
-.embla__slide {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-sm;
-  flex: 0 0 100%;
-  min-width: 0;
-
-  p {
-    margin: 0;
-    &:not(.findUs-text) {
-      margin-bottom: $spacing-xs;
-    }
-
-    &.findUs-text {
-      font-size: $font-size-sm;
-      font-weight: $font-weight-light;
-    }
+  &__container {
+    display: flex;
   }
-}
 
-@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-  .findUs-container {
-    background: url($findUs-tablet-background-url);
-    background-repeat: no-repeat;
-    background-size: cover;
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    flex: 0 0 100%;
+    min-width: 0;
+
+    p {
+      margin: 0;
+      &:not(.findUs-text) {
+        margin-bottom: $spacing-xs;
+      }
+
+      &.findUs-text {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+      }
+    }
   }
 }

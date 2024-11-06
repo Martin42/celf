@@ -66,7 +66,7 @@ export const FAQ = () => {
   const questionsData = data;
 
   return (
-    <div className="faq-container">
+    <section className="faq-container">
       <h1>PERGUNTAS FREQUENTES</h1>
       <div className="collapsible-container">
         {/* Collapsibles here */}
@@ -116,6 +116,6 @@ export const FAQ = () => {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };

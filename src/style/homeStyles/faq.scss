@@ -5,9 +5,25 @@
   flex-direction: column;
   gap: $spacing-xl;
   margin: $margin-mobile;
+
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    margin: $margin-laptop;
+    gap: $spacing-xxl;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin: $margin-desktop;
+  }
   h1 {
     color: $color-terciary;
-    font-size: $font-size-lg;
+    font-size: $font-size-xl;
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-2xl;
+    }
     text-align: center;
   }
 }
@@ -19,6 +35,11 @@
   p {
     margin-right: 0.25rem;
     font-size: $font-size-sm;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+    }
   }
 }
 
@@ -28,6 +49,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $breakpoint-md) {
+    width: 70vw;
+    align-self: center;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 50vw;
+  }
+
   gap: $spacing-md;
 }
 
@@ -35,6 +66,10 @@
   margin: 0 1rem;
   border-bottom: 1px solid #e6e6e6;
   padding: 1rem;
+
+  @media (min-width: $breakpoint-md) {
+    margin: unset;
+  }
 }
 
 .collapsible-open {
@@ -50,6 +85,11 @@
 .Collapsible__contentInner p {
   font-size: $font-size-sm;
   font-weight: $font-weight-light;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+  }
 }
 
 // Form
@@ -59,6 +99,7 @@
   border: 0.632px solid #ababab;
   box-shadow: 0px 2.529px 7.587px rgba(0, 0, 0, 0.04) inset;
   font-size: $font-size-xs;
+  padding: 0.5rem;
 }
 
 .form-container {
@@ -66,13 +107,22 @@
   flex-direction: column;
   gap: $spacing-md;
   margin: 0 1.5rem;
+  @media (min-width: $breakpoint-md) {
+    width: 70vw;
+    align-self: center;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 50vw;
+  }
+
   form {
     display: flex;
     flex-direction: column;
     gap: $spacing-md;
   }
   h2 {
-    font-size: $font-size-base;
+    font-size: $font-size-lg;
     margin: 0;
     margin-top: 1rem;
   }
@@ -85,6 +135,10 @@
   label {
     font-size: $font-size-xs;
     font-weight: $font-weight-light;
+
+    @media (min-width: $breakpoint-md) {
+      font-weight: $font-weight-normal;
+    }
   }
   input {
     @include input-style;
@@ -99,11 +153,14 @@
   label {
     font-size: $font-size-xs;
     font-weight: $font-weight-light;
+
+    @media (min-width: $breakpoint-md) {
+      font-weight: $font-weight-normal;
+    }
   }
   textarea {
     @include input-style;
     min-height: 6rem;
-    padding-top: 0.25rem;
   }
 }
 
