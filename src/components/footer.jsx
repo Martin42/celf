@@ -3,27 +3,21 @@ import "../style/footer.scss";
 
 // Images Imports
 import govImg from "../assets/gov-pt-logo.png";
-import poiseImg from "../assets/poise-logo.png";
-import portugal2020Img from "../assets/portugal-2020-logo.png";
 import ueImg from "../assets/ue-logo.png";
+import prrImg from "../assets/prr-logo.png";
 
 export const Footer = () => {
   return (
     <footer className="footer-layout-container">
       <div className="footer-logo-container">
         <img
+          src={prrImg}
+          alt="Logo Plano de Recuperação e Resiliência"
+          className="footer-logo-properties"
+        />
+        <img
           src={govImg}
           alt="Logo Governo Portugal"
-          className="footer-logo-properties"
-        />
-        <img
-          src={poiseImg}
-          alt="Logo Poise"
-          className="footer-logo-properties"
-        />
-        <img
-          src={portugal2020Img}
-          alt="Logo Projeto Portugal 2020"
           className="footer-logo-properties"
         />
         <img
