@@ -93,13 +93,13 @@ export const Navbar = () => {
               Empresas
             </Link>
             {/* ICON ELEARNING */}
-            <Link to={"/elearning"} onClick={toggleNav} className="nav-group">
+            <Link to={"/projeto"} onClick={toggleNav} className="nav-group">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="link-svg-properties"
                 viewBox="0 0 21 21"
                 role="img"
-                aria-label="elearning icon"
+                aria-label="projeto icon"
               >
                 <path
                   d="M2.549 7.99984C3.61317 4.619 6.77984 2.1665 10.5207 2.1665C14.8523 2.1665 18.414 5.45567 18.8332 9.6665L17.1665 9.32734M18.4507 12.9998C17.9141 14.693 16.8521 16.1712 15.4188 17.2201C13.9854 18.269 12.2552 18.834 10.479 18.8332C6.14734 18.8332 2.58567 15.544 2.1665 11.3332L3.83317 11.6723"
@@ -116,7 +116,7 @@ export const Navbar = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              Elearning
+              Projeto
             </Link>
           </nav>
         </section>
@@ -144,10 +144,10 @@ export const Navbar = () => {
                 Empresas
               </Link>
               <Link
-                to={"/elearning"}
-                className={`${location === "/elearning" ? "active" : ""}`}
+                to={"/projeto"}
+                className={`${location === "/projeto" ? "active" : ""}`}
               >
-                eLearning
+                Projeto
               </Link>
 
               <div className="contacts-container">
