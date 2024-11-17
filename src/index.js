@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style/index.scss";
-import App from "./App";
-import { Navbar } from "./components/navbar";
 import reportWebVitals from "./reportWebVitals";
+
+import Home from "./components/home/Home";
+import { Navbar } from "./components/navbar";
+import { Footer } from "./components/footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,12 +15,14 @@ root.render(
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
         <Route path="/formacao" element={""} />
         <Route path="/empresas" element={""} />
         <Route path="/projeto" element={""} />
       </Routes>
     </Router>
+
+    <Footer />
   </React.StrictMode>
 );
 
