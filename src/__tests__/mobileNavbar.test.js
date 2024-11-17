@@ -45,7 +45,7 @@ describe("Navbar Component", () => {
     expect(navContainer).toHaveClass("open");
   });
 
-  it("should show navigation links and svgs when the menu is open", () => {
+  it("should show navigation links when the menu is open", () => {
     render(
       <MemoryRouter>
         <Navbar />
@@ -54,21 +54,15 @@ describe("Navbar Component", () => {
 
     openMenu();
 
-    const formacaoLink = screen.getByText("Formação");
-    const empresasLink = screen.getByText("Empresas");
-    const elearningLink = screen.getByText("Elearning");
+    const inicioLink = screen.getByText("Ínicio");
+    const financiadaLink = screen.getByText("Formação Financiada");
+    const naoFinanciadaLink = screen.getByText("Formação Não Financiada");
+    const SobreNosLink = screen.getByText("Sobre Nós");
 
-    expect(formacaoLink).toBeInTheDocument();
-    expect(empresasLink).toBeInTheDocument();
-    expect(elearningLink).toBeInTheDocument();
-
-    const formacaoSVG = screen.getByLabelText("formacao icon");
-    const empresasSVG = screen.getByLabelText("empresas icon");
-    const elearningSVG = screen.getByLabelText("elearning icon");
-
-    expect(formacaoSVG).toBeInTheDocument();
-    expect(empresasSVG).toBeInTheDocument();
-    expect(elearningSVG).toBeInTheDocument();
+    expect(inicioLink).toBeInTheDocument();
+    expect(financiadaLink).toBeInTheDocument();
+    expect(naoFinanciadaLink).toBeInTheDocument();
+    expect(SobreNosLink).toBeInTheDocument();
   });
 
   it("should close the navigation menu when a link or the hamburger icon is clicked", () => {
@@ -80,8 +74,8 @@ describe("Navbar Component", () => {
 
     openMenu();
 
-    const formacaoLink = screen.getByText("Formação");
-    fireEvent.click(formacaoLink);
+    const financiadaLink = screen.getByText("Formação Financiada");
+    fireEvent.click(financiadaLink);
 
     const navContainer = screen.getByRole("navigation");
     expect(navContainer).not.toHaveClass("open");
