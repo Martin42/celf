@@ -13,12 +13,12 @@ export const Hero = () => {
             <p>Adquira novas competências para enfrentar o mundo de trabalho</p>
           </div>
           <button type="button" className="white-button">
-            Saiba Mais
+            Oferta Formativa
           </button>
         </div>
       </section>
 
-      <section className="about-container">
+      {/* <section className="about-container">
         <h1>O CELF,</h1>
         <p>
           Escola de Línguas e Formação, foi fundada em 2006, com sede em
@@ -41,7 +41,7 @@ export const Hero = () => {
           </span>
           da sociedade, de forma a promover a empregabilidade.
         </p>
-      </section>
+      </section> */}
     </>
   );
 };

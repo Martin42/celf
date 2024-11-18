@@ -85,7 +85,7 @@ export const FAQ = () => {
         ))}
       </div>
 
-      <div className="form-container">
+      {/* <div className="form-container">
         <h2>Tem alguma questão?</h2>
         <form action="submit">
           <div className="email-container">
@@ -115,7 +115,7 @@ export const FAQ = () => {
             Enviar
           </button>
         </form>
-      </div>
+      </div> */}
     </section>
   );
 };

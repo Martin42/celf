@@ -31,6 +31,10 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
 .hero-container {
   position: relative;
   height: 25rem;
+  @media (min-width: $breakpoint-md) {
+    height: 28rem;
+  }
+
   display: flex;
   align-items: center;
   overflow: hidden;

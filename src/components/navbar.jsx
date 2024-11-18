@@ -7,6 +7,7 @@ import useMediaQuery from "../utils/useMediaQuery";
 
 export const Navbar = () => {
   const [isNavOpen, setNavOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleNav = () => {
     setNavOpen(!isNavOpen);
@@ -65,7 +66,7 @@ export const Navbar = () => {
             </Link>
 
             <Link
-              to={"/FormacaoFinanciada"}
+              to={"/formacao/financiada"}
               onClick={toggleNav}
               className="nav-group"
             >
@@ -73,7 +74,7 @@ export const Navbar = () => {
             </Link>
 
             <Link
-              to={"/formacaoNaoFinanciada"}
+              to={"/formacao/nao-financiada"}
               onClick={toggleNav}
               className="nav-group"
             >
@@ -96,12 +97,61 @@ export const Navbar = () => {
               <Link to={"/"} className={`${location === "/" ? "active" : ""}`}>
                 Início
               </Link>
-              <Link
-                to={"/formacao"}
-                className={`${location === "/formacao" ? "active" : ""}`}
+
+              {/* Dropdown Menu */}
+              <div
+                className={`dropdown ${isDropdownOpen ? "open" : ""}`}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                Formação
-              </Link>
+                <div
+                  className={`${location === "/formacao/financiada" || location === "formacao/nao-financiada" ? "active" : ""} dropdown-trigger`}
+                >
+                  Formação
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    className={`chevron ${isDropdownOpen ? "rotate" : ""}`}
+                  >
+                    <g clip-path="url(#clip0_864_462)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.52623 7.27113L3.7549 3.4998L4.69757 2.55713L7.99757 5.85713L11.2976 2.55713L12.2402 3.4998L8.4689 7.27113C8.34388 7.39611 8.17434 7.46632 7.99757 7.46632C7.82079 7.46632 7.65125 7.39611 7.52623 7.27113Z"
+                        fill="black"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_864_462">
+                        <rect
+                          width="8"
+                          height="16"
+                          fill="white"
+                          transform="translate(16 0.5) rotate(90)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div className="dropdown-menu">
+                  <Link
+                    to={"/formacao/financiada"}
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Financiada
+                  </Link>
+                  <Link
+                    to={"/formacao/nao-financiada"}
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Não Financiada
+                  </Link>
+                </div>
+              </div>
+
               <Link
                 to={"/sobreNos"}
                 className={`${location === "/sobreNos" ? "active" : ""}`}
