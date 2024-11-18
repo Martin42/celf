@@ -1,7 +1,6 @@
 @use "variables" as *;
 
 .footer-layout-container {
-  margin-top: $spacing-xxl;
   background-color: $color-footer;
   h2 {
     font-size: $font-size-base;
@@ -91,6 +90,9 @@
   gap: $spacing-xs;
   border-top: 1px solid #4d4e4f;
   padding: 1rem 0;
+  a {
+    text-decoration: underline;
+  }
 }
 
 // Extra Media Queries
