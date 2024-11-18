@@ -81,7 +81,7 @@ export const Navbar = () => {
               Formação Não Financiada
             </Link>
 
-            <Link to={"/sobreNos"} onClick={toggleNav} className="nav-group">
+            <Link to={"/sobre-nos"} onClick={toggleNav} className="nav-group">
               Sobre Nós
             </Link>
           </nav>
@@ -153,8 +153,8 @@ export const Navbar = () => {
               </div>
 
               <Link
-                to={"/sobreNos"}
-                className={`${location === "/sobreNos" ? "active" : ""}`}
+                to={"/sobre-nos"}
+                className={`${location === "/sobre-nos" ? "active" : ""}`}
               >
                 Sobre Nós
               </Link>
