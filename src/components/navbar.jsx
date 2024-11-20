@@ -173,7 +173,7 @@ export const Navbar = () => {
                       fill="black"
                     />
                   </svg>
-                  <span>+351 227 130 275</span>
+                  <span>+351 227 130 875</span>
                 </div>
                 <div>
                   <svg
