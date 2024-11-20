@@ -1,10 +1,10 @@
 import React from "react";
-import { Hero } from "../home/hero";
+import { AboutHero } from "./aboutHero";
 
 function About() {
   return (
     <section className="main-container">
-      <Hero />
+      <AboutHero />
     </section>
   );
 }

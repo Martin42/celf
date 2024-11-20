@@ -1,11 +1,5 @@
 @use "../variables" as *;
 
-// Mixins
-
-@mixin reset-margin {
-  margin: 0;
-}
-
 // Base Styles
 
 h1 {
@@ -15,18 +9,18 @@ h1 {
     font-size: $font-size-4xl;
   }
   font-weight: $font-weight-bold;
-  @include reset-margin;
 }
 
-p {
-  @include reset-margin;
+p,
+h1 {
+  margin: 0;
 }
 
-// Hero
+// HERO HOME
 $hero-background-mobile-url: "../../assets/hero-mobile-bg.png";
 $hero-background-tablet-url: "../../assets/hero-tablet-bg.png";
 $hero-background-desktop-url: "../../assets/hero-desktop-bg.png";
-$hero-background-overlay: rgba(33, 33, 33, 0.45);
+$background-overlay: rgba(33, 33, 33, 0.45);
 
 .hero-container {
   position: relative;
@@ -38,39 +32,40 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
   display: flex;
   align-items: center;
   overflow: hidden;
-
-  @media (min-width: $breakpoint-xs) {
-    justify-content: center;
-  }
+  justify-content: center;
 }
 
-.hero-bg {
+.hero-home-bg,
+.hero-about-bg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.hero-home-bg {
   background:
-    linear-gradient($hero-background-overlay, $hero-background-overlay),
+    linear-gradient($background-overlay, $background-overlay),
     url($hero-background-mobile-url) no-repeat center center;
+  background-size: cover;
 
   @media (min-width: $breakpoint-xs) {
     background:
-      linear-gradient($hero-background-overlay, $hero-background-overlay),
+      linear-gradient($background-overlay, $background-overlay),
       url($hero-background-tablet-url) no-repeat center center;
     background-size: cover;
   }
 
   @media (min-width: $breakpoint-lg) {
     background:
-      linear-gradient($hero-background-overlay, $hero-background-overlay),
+      linear-gradient($background-overlay, $background-overlay),
       url($hero-background-desktop-url) no-repeat center center;
     background-size: cover;
   }
-  background-size: cover;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  z-index: 0;
 }
 
 .hero-content {
@@ -153,4 +148,33 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
       font-weight: $font-weight-bold;
     }
   }
+}
+
+// HERO ABOUT
+$about-background-mobile-url: "../../assets/about-mobile-bg.png";
+$about-background-tablet-url: "../../assets/about-tablet-bg.png";
+$about-background-desktop-url: "../../assets/about-desktop-bg.png";
+
+.hero-about-bg {
+  background:
+    linear-gradient($background-overlay, $background-overlay),
+    url($about-background-mobile-url) no-repeat center center;
+  background-size: cover;
+
+  @media (min-width: $breakpoint-xs) {
+    background:
+      linear-gradient($background-overlay, $background-overlay),
+      url($about-background-tablet-url) no-repeat center center;
+    background-size: cover;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    background:
+      linear-gradient($background-overlay, $background-overlay),
+      url($about-background-desktop-url) no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.hero-about-bg .hero-content {
 }
