@@ -159,7 +159,7 @@ export const Navbar = () => {
                 Sobre Nós
               </Link>
 
-              <div className="contacts-container">
+              <div className="contacts">
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

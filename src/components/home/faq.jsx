@@ -84,38 +84,6 @@ export const FAQ = () => {
           </Collapsible>
         ))}
       </div>
-
-      {/* <div className="form-container">
-        <h2>Tem alguma questão?</h2>
-        <form action="submit">
-          <div className="email-container">
-            <label htmlFor="email">Email*</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="example@gmail.com"
-              autoComplete="email"
-              required
-            />
-          </div>
-
-          <div className="questions-container">
-            <label htmlFor="question">Questão*</label>
-            <textarea
-              name="question"
-              id="question"
-              placeholder="Escreva aqui a sua questão"
-              required
-            ></textarea>
-          </div>
-
-          <span className="mandatory-field">(*) Campos Obrigatórios</span>
-          <button type="submit" className="red-button">
-            Enviar
-          </button>
-        </form>
-      </div> */}
     </section>
   );
 };
