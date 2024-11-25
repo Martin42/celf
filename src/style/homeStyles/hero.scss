@@ -36,7 +36,8 @@ $background-overlay: rgba(33, 33, 33, 0.45);
 }
 
 .hero-home-bg,
-.hero-about-bg {
+.hero-about-bg,
+.hero-financiada-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,6 +76,8 @@ $background-overlay: rgba(33, 33, 33, 0.45);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  height: 100%;
 
   @media (min-width: $breakpoint-xs) {
     align-items: center;
@@ -176,5 +179,48 @@ $about-background-desktop-url: "../../assets/about-desktop-bg.png";
   }
 }
 
-.hero-about-bg .hero-content {
+// HERO FINANCIADA
+
+$financiada-background-mobile-url: "../../assets/financiada-mobile-bg.png";
+$financiada-background-tablet-url: "../../assets/financiada-tablet-bg.png";
+$financiada-background-desktop-url: "../../assets/financiada-desktop-bg.png";
+$financiada-background-overlay: rgba(33, 33, 33, 0.1);
+
+.hero-financiada-bg {
+  background:
+    linear-gradient(
+      $financiada-background-overlay,
+      $financiada-background-overlay
+    ),
+    url($financiada-background-mobile-url) no-repeat center center;
+  background-size: cover;
+
+  @media (min-width: $breakpoint-xs) {
+    background:
+      linear-gradient(
+        $financiada-background-overlay,
+        $financiada-background-overlay
+      ),
+      url($financiada-background-tablet-url) no-repeat center center;
+    background-size: cover;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    background:
+      linear-gradient(
+        $financiada-background-overlay,
+        $financiada-background-overlay
+      ),
+      url($financiada-background-desktop-url) no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.certification-logo-container {
+  display: flex;
+  margin: 1rem;
+  gap: $spacing-md;
+  align-self: center;
+  position: absolute;
+  bottom: 0;
 }
