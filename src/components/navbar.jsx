@@ -62,7 +62,7 @@ export const Navbar = () => {
 
           <nav className={`nav-container ${isNavOpen ? "open" : ""}`}>
             <Link to={"/"} onClick={toggleNav} className="nav-group">
-              Ínicio
+              Início
             </Link>
 
             <Link

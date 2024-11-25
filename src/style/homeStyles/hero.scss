@@ -216,6 +216,11 @@ $financiada-background-overlay: rgba(33, 33, 33, 0.1);
   }
 }
 
+.emd-logo {
+  height: 70px;
+  width: auto;
+}
+
 .certification-logo-container {
   display: flex;
   margin: 1rem;
@@ -223,4 +228,8 @@ $financiada-background-overlay: rgba(33, 33, 33, 0.1);
   align-self: center;
   position: absolute;
   bottom: 0;
+  img {
+    height: 35px;
+    width: auto;
+  }
 }
