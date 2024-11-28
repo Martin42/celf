@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/financiadaStyles/financiadaInfo.scss";
+import "../../style/financiadaStyles/financiada.scss";
 
 export const FinanciadaInfo = () => {
   return (

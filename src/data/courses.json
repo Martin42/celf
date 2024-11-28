@@ -1,0 +1,167 @@
+[
+  {
+    "id": "9241",
+    "nome": "Marketing Digital",
+    "area": "Técnico de Comunicação",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Avaliar os impactos e os efeitos do advento da nova economia, as transações comerciais a partir de ambientes virtuais - B2C, B2B, B2A;",
+      "Identificar as ferramentas do e-marketing e do e-commerce;",
+      "Aplicar as ferramentas de gestão de informação e da comunicação, criando uma relação de interatividade, centrada nas necessidades dos consumidores."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "10785",
+    "nome": "Publicidade nas Redes Sociais",
+    "area": "Técnico de Comunicação",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Reconhecer os diferentes formatos de publicidade nas principais redes sociais.",
+      "Implementar campanhas pagas nas redes sociais para diferentes objetivos.",
+      "Medir e analisar uma campanha paga nas diversas redes sociais.",
+      "Definir planos de ação para otimização contínua."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "10759",
+    "nome": "Teletrabalho",
+    "area": "Técnico de Comunicação",
+    "objetivos": [
+      "Reconhecer o enquadramento legal, as modalidades de teletrabalho e o seu impacto para a organização e trabalhadores/as.",
+      "Identificar o perfil e papel do/a teletrabalhador/a no contexto dos novos desafios laborais e ocupacionais e das políticas organizacionais.",
+      "Identificar e selecionar ferramentas e plataformas tecnológicas de apoio ao trabalho remoto.",
+      "Adaptar o ambiente de trabalho remoto ao regime de trabalho à distância e implementar estratégias de comunicação, produtividade, motivação e de confiança em ambiente colaborativo.",
+      "Aplicar as normas de segurança, confidencialidade e proteção de dados organizacionais nos processos de comunicação e informação em regime de teletrabalho.",
+      "Planear e organizar o dia de trabalho em regime de teletrabalho, assegurando a conciliação da vida profissional com a vida pessoal e familiar."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "0753",
+    "nome": "Sistemas operativos utilitários complementares",
+    "area": "Técnico de Operador de Informática",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Instalar e configurar utilitários complementares aos sistemas operativos.",
+      "Operar utilitários de antivírus.",
+      "Executar tarefas de compressão e descompressão de ficheiros."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "0755",
+    "nome": "Processador de Texto - Funcionalidades Avançadas",
+    "area": "Técnico de Operador de Informática",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Automatizar tarefas de edição e elaboração de documentos.",
+      "Efectuar impressões em série.",
+      "Elaborar e utilizar macros e formulários."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "0779",
+    "nome": "Utilitário de Apresentação Gráfica",
+    "area": "Programador de Informática",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Construir e utilizar apresentações gráficas.",
+      "Aplicar elementos dinâmicos (som e imagem) às apresentações gráficas."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "10672",
+    "nome": "Introdução à Utilização e Proteção de Dados Pessoais",
+    "area": "Programador de Informática",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Identificar a importância do direito fundamental à proteção de dados pessoais.",
+      "Reconhecer as implicações do Regulamento Geral da Proteção de Dados (RGPD) na respetiva atividade profissional.",
+      "Reconhecer a importância da integração do RGPD com as diferentes normas dos Sistemas de Gestão (Qualidade, Ambiente, Segurança, Segurança Informática, …)."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "0798",
+    "nome": "Utilitários",
+    "area": "Programador de Informática",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Instalar e configurar utilitários sobre o sistema operativo (SO)."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "0664",
+    "nome": "Aplicações Informáticas de Contabilidade",
+    "area": "Contabilidade",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": ["Utilizar uma aplicação informática de contabilidade."],
+    "url": ""
+  },
+
+  {
+    "id": "0668",
+    "nome": "Ficheiros de Armazém e Contas Correntes",
+    "area": "Contabilidade",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Executar o apoio administrativo e logístico, associado à função de aprovisionamento."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "0616",
+    "nome": "Aplicações Informáticas de Gestão de Pessoal",
+    "area": "Contabilidade",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Utilizar uma aplicação informática da área de gestão de pessoal.",
+      "Utilizar base de dados com ligação a outras aplicações."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "EC OS",
+    "nome": "Office para Secretárias",
+    "area": "Cursos Extra-Catálogo",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
+    "url": ""
+  },
+
+  {
+    "id": "EC RO",
+    "nome": "Reuniões Online",
+    "area": "Cursos Extra-Catálogo",
+    "carga": "25 Horas",
+    "pontos": "2.25",
+    "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
+    "url": ""
+  }
+]

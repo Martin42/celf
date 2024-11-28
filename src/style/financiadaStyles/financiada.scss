@@ -1,0 +1,146 @@
+@use "../variables" as *;
+
+// Base Styles
+
+.financiada-info-container,
+.financiada-courses-container {
+  margin: $margin-mobile;
+
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    margin: $margin-laptop;
+    gap: $spacing-xxl;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin: $margin-desktop;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+  h1 {
+    color: $color-terciary;
+    font-size: $font-size-xl;
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-2xl;
+    }
+    text-align: center;
+  }
+  article {
+    font-size: $font-size-base;
+    font-style: normal;
+    font-weight: $font-weight-light;
+    line-height: 132.075%;
+  }
+  p {
+    text-indent: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: $color-secondary;
+    font-weight: $font-weight-normal;
+  }
+  span {
+    font-weight: $font-weight-normal;
+  }
+}
+
+// Collapsibles
+
+.collapsible-courses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: $border-radius-base;
+  border: 1px solid #e6e6e6;
+}
+
+.collapsible-courses-closed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 1rem;
+  padding: 1rem;
+  @media (min-width: $breakpoint-md) {
+    margin: unset;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.collapsible-courses-open {
+  @extend .collapsible-courses-closed;
+}
+
+.Collapsible__contentInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $spacing-xl;
+  // margin: 2rem 0;
+}
+
+// Courses
+.courses-card-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 16rem;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-base;
+}
+
+.courses-card-img {
+  padding: 1rem 2rem;
+  height: 8rem;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  span {
+    color: white;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.courses-card-info {
+  display: flex;
+  height: 8rem;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  flex-shrink: 0;
+  p {
+    text-indent: unset;
+    font-weight: $font-weight-normal;
+  }
+  span {
+    font-size: $font-size-xs;
+    color: #4e4e4e;
+    font-weight: $font-weight-light;
+  }
+  button {
+    align-self: flex-end;
+  }
+}
+
+// Course Card Images
+
+$background-overlay: rgba(33, 33, 33, 0.2);
+
+.C9241 {
+  background:
+    linear-gradient($background-overlay, $background-overlay),
+    url("https://res.cloudinary.com/ds2krfoyx/image/upload/v1732719708/9214-mobile-bg_autypq.webp")
+      no-repeat center center;
+  background-size: cover;
+}

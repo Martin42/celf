@@ -1,12 +1,11 @@
 import React from "react";
-import "../../style/homeStyles/faq.scss";
 import Collapsible from "react-collapsible";
-import data from "../../data/faq.json";
+import courses from "../../data/courses.json";
 
-const trigger = (question) => {
+const trigger = (element) => {
   return (
     <div className="trigger-container open">
-      <p>{question}</p>
+      <p>Área de {element}</p>
       <button
         type="button"
         className="trigger-button"
@@ -29,10 +28,10 @@ const trigger = (question) => {
   );
 };
 
-const triggerIsOpen = (question) => {
+const triggerIsOpen = (element) => {
   return (
     <div className="trigger-container">
-      <p>{question}</p>
+      <p>Área de {element}</p>
       <button
         type="button"
         className="trigger-button"
@@ -62,25 +61,48 @@ const triggerIsOpen = (question) => {
   );
 };
 
-export const FAQ = () => {
-  const questionsData = data;
+const courseCard = (element) => {
+  const filteredCourses = courses.filter((e) => e.area === element);
 
+  return filteredCourses.map((element) => (
+    <div className="courses-card-container">
+      <div className={`courses-card-img C${element.id}`}>
+        <span>UFCD {element.id}</span>
+      </div>
+      <div className="courses-card-info">
+        <div>
+          <p>{element.nome}</p>
+          <span>Presencial/Elearning - 25 Horas</span>
+        </div>
+        <button className="red-button">Inscreva-se</button>
+      </div>
+    </div>
+  ));
+};
+
+export const FinanciadaCourses = () => {
+  const courseArea = [
+    "Técnico de Comunicação",
+    "Técnico de Operador de Informática",
+    "Programador de Informática",
+    "Contabilidade",
+    "Cursos Extra-Catálogo"
+  ];
   return (
-    <section className="faq-container">
-      <h1>PERGUNTAS FREQUENTES</h1>
-      <div className="collapsible-container">
-        {/* Collapsibles here */}
-        {questionsData.map((element) => (
+    <section className="financiada-courses-container">
+      <h1>CURSOS FINANCIADOS</h1>
+      <div className="collapsible-courses-container">
+        {courseArea.map((element) => (
           <Collapsible
-            className="collapsible-closed"
-            id={element.id}
-            openedClassName="collapsible-open"
+            className="collapsible-courses-closed"
+            key={element}
+            openedClassName="collapsible-courses-open"
             overflowWhenOpen="auto"
             transitionTime={500}
-            trigger={triggerIsOpen(element.question)}
-            triggerWhenOpen={trigger(element.question)}
+            trigger={triggerIsOpen(element)}
+            triggerWhenOpen={trigger(element)}
           >
-            <p>{element.answer}</p>
+            {courseCard(element)}
           </Collapsible>
         ))}
       </div>
