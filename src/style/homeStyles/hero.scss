@@ -11,16 +11,19 @@ h1 {
   font-weight: $font-weight-bold;
 }
 
-p,
-h1 {
-  margin: 0;
-}
-
 // HERO HOME
 $hero-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/wtugdfsshkxpftthzexc.webp";
 $hero-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/ge7dsgnbgnb4tv13afpf.webp";
 $hero-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/t4qfnfne7qnwhpvqrpei.webp";
 $background-overlay: rgba(33, 33, 33, 0.45);
+
+//  Mixin
+@mixin background-with-overlay($background-url) {
+  background:
+    linear-gradient($background-overlay, $background-overlay),
+    url($background-url) no-repeat center center;
+  background-size: cover;
+}
 
 .hero-container {
   position: relative;
@@ -49,23 +52,14 @@ $background-overlay: rgba(33, 33, 33, 0.45);
 }
 
 .hero-home-bg {
-  background:
-    linear-gradient($background-overlay, $background-overlay),
-    url($hero-background-mobile-url) no-repeat center center;
-  background-size: cover;
+  @include background-with-overlay($hero-background-mobile-url);
 
   @media (min-width: $breakpoint-xs) {
-    background:
-      linear-gradient($background-overlay, $background-overlay),
-      url($hero-background-tablet-url) no-repeat center center;
-    background-size: cover;
+    @include background-with-overlay($hero-background-tablet-url);
   }
 
   @media (min-width: $breakpoint-lg) {
-    background:
-      linear-gradient($background-overlay, $background-overlay),
-      url($hero-background-desktop-url) no-repeat center center;
-    background-size: cover;
+    @include background-with-overlay($hero-background-desktop-url);
   }
 }
 
@@ -159,23 +153,14 @@ $about-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload
 $about-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553954/about-desktop-bg_upkdsl.webp";
 
 .hero-about-bg {
-  background:
-    linear-gradient($background-overlay, $background-overlay),
-    url($about-background-mobile-url) no-repeat center center;
-  background-size: cover;
+  @include background-with-overlay($about-background-mobile-url);
 
   @media (min-width: $breakpoint-xs) {
-    background:
-      linear-gradient($background-overlay, $background-overlay),
-      url($about-background-tablet-url) no-repeat center center;
-    background-size: cover;
+    @include background-with-overlay($about-background-tablet-url);
   }
 
   @media (min-width: $breakpoint-lg) {
-    background:
-      linear-gradient($background-overlay, $background-overlay),
-      url($about-background-desktop-url) no-repeat center center;
-    background-size: cover;
+    @include background-with-overlay($about-background-desktop-url);
   }
 }
 
@@ -186,33 +171,32 @@ $financiada-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/u
 $financiada-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554085/financiada-desktop-bg_c5kh8l.webp";
 $financiada-background-overlay: rgba(33, 33, 33, 0.1);
 
-.hero-financiada-bg {
+//  Mixin
+@mixin background-financiada-with-overlay($background-url) {
   background:
     linear-gradient(
       $financiada-background-overlay,
       $financiada-background-overlay
     ),
-    url($financiada-background-mobile-url) no-repeat center center;
+    url($background-url) no-repeat center center;
   background-size: cover;
+}
+
+.hero-financiada-bg {
+  @include background-financiada-with-overlay(
+    $financiada-background-mobile-url
+  );
 
   @media (min-width: $breakpoint-xs) {
-    background:
-      linear-gradient(
-        $financiada-background-overlay,
-        $financiada-background-overlay
-      ),
-      url($financiada-background-tablet-url) no-repeat center center;
-    background-size: cover;
+    @include background-financiada-with-overlay(
+      $financiada-background-tablet-url
+    );
   }
 
   @media (min-width: $breakpoint-lg) {
-    background:
-      linear-gradient(
-        $financiada-background-overlay,
-        $financiada-background-overlay
-      ),
-      url($financiada-background-desktop-url) no-repeat center center;
-    background-size: cover;
+    @include background-financiada-with-overlay(
+      $financiada-background-desktop-url
+    );
   }
 }
 

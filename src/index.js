@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Financiada from "./components/financiada/Financiada";
+import FinanciadaId from "./components/financiada/id/FinanciadaId";
 
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
@@ -21,6 +22,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/formacao/financiada" element={<Financiada />} />
         <Route path="/formacao/nao-financiada" element={""} />
+        <Route path="/formacao/financiada/:id" element={<FinanciadaId />} />
         <Route path="/sobre-nos" element={<About />} />
       </Routes>
     </Router>

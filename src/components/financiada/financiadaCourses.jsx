@@ -1,6 +1,7 @@
 import React from "react";
 import Collapsible from "react-collapsible";
 import courses from "../../data/courses.json";
+import { Link } from "react-router-dom";
 
 const trigger = (element) => {
   return (
@@ -74,7 +75,9 @@ const courseCard = (element) => {
           <p>{element.nome}</p>
           <span>Presencial/Elearning - 25 Horas</span>
         </div>
-        <button className="red-button">Inscreva-se</button>
+        <Link to={`${element.id}`}>
+          <button className="red-button">Inscreva-se</button>
+        </Link>
       </div>
     </div>
   ));

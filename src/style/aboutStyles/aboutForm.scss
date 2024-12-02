@@ -1,12 +1,6 @@
 @use "../variables" as *;
 
 // Form
-
-p,
-h1 {
-  margin: 0;
-}
-
 @mixin input-style {
   border-radius: 6px;
   border: 0.632px solid #ababab;
