@@ -95,10 +95,10 @@ export const FinanciadaCourses = () => {
     <section className="financiada-courses-container">
       <h1>CURSOS FINANCIADOS</h1>
       <div className="collapsible-courses-container">
-        {courseArea.map((element) => (
+        {courseArea.map((element, index) => (
           <Collapsible
             className="collapsible-courses-closed"
-            key={element}
+            key={index}
             openedClassName="collapsible-courses-open"
             overflowWhenOpen="auto"
             transitionTime={500}

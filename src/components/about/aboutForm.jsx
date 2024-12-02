@@ -5,7 +5,7 @@ export const Form = () => {
     <section className="form-container">
       <h1>TEM ALGUMA DÚVIDA</h1>
       <form action="submit">
-        <div className="email-container">
+        <div>
           <label htmlFor="email">Email*</label>
           <input
             type="text"
@@ -17,7 +17,7 @@ export const Form = () => {
           />
         </div>
 
-        <div className="questions-container">
+        <div>
           <label htmlFor="question">Questão*</label>
           <textarea
             name="question"

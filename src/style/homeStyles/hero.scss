@@ -114,12 +114,8 @@ $background-overlay: rgba(33, 33, 33, 0.45);
   }
 
   h1 {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
     margin-bottom: $spacing-md;
-
     @media (min-width: $breakpoint-sm) {
-      -webkit-text-stroke-width: 3px;
       margin-bottom: $spacing-lg;
     }
   }
@@ -130,7 +126,6 @@ $background-overlay: rgba(33, 33, 33, 0.45);
     font-weight: $font-weight-light;
 
     @media (min-width: $breakpoint-sm) {
-      font-weight: $font-weight-normal;
       line-height: normal;
     }
     &:not(:last-child) {
@@ -140,7 +135,6 @@ $background-overlay: rgba(33, 33, 33, 0.45);
 
   span {
     font-weight: $font-weight-normal;
-
     @media (min-width: $breakpoint-sm) {
       font-weight: $font-weight-bold;
     }

@@ -88,13 +88,8 @@
   text-align: center;
   font-size: $font-size-lg;
 
-  @media (min-width: $breakpoint-md) {
-    font-weight: $font-weight-bold;
-  }
-
   @media (min-width: $breakpoint-lg) {
     font-size: $font-size-xl;
-    font-weight: $font-weight-bold;
   }
   margin-bottom: $spacing-sm;
 }
@@ -102,8 +97,4 @@
 .card-subtitle {
   text-align: center;
   font-weight: $font-weight-light;
-
-  @media (min-width: $breakpoint-md) {
-    font-weight: $font-weight-normal;
-  }
 }

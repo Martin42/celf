@@ -1,0 +1,22 @@
+[
+    { "label": "Nome", "type": "text" },
+    { "label": "Morada", "type": "text" },
+    { "label": "Cidade", "type": "text" },
+    { "label": "Código Postal", "type": "number", "placeholder": "1234-567" },
+    { "label": "Data de Nascimento", "type": "date", "placeholder": "dd/mm/aaaa" },
+    {
+      "label": "Sexo",
+      "type": "text",
+      "select": ["Homem", "Mulher", "Prefiro não dizer"]
+    },
+    { "label": "Habilitações", "type": "text" },
+    { "label": "Profissão", "type": "text" },
+    { "label": "Telemóvel", "type": "number" },
+    {
+      "label": "Email",
+      "type": "email",
+      "autoComplete": "email",
+      "placeholder": "user@email.com"
+    }
+  ]
+  
