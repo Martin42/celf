@@ -5,9 +5,9 @@ import { IdHero } from "./idHero";
 import { IdInfo } from "./idInfo";
 import { IdForm } from "./idForm";
 
-import courses from "../../../data/courses.json";
+import courses from "../../data/courses.json";
 
-function FinanciadaId() {
+function Id() {
   const { id } = useParams();
   const filteredCourses = courses.find((e) => e.id === id);
 
@@ -20,4 +20,4 @@ function FinanciadaId() {
   );
 }
 
-export default FinanciadaId;
+export default Id;
