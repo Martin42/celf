@@ -1,9 +1,8 @@
 import React from "react";
-import "../../style/financiadaStyles/financiada.scss";
 
 export const FinanciadaInfo = () => {
   return (
-    <section className="financiada-info-container">
+    <>
       <h1>FORMAÇÃO FINANCIADA</h1>
       <article>
         <p>
@@ -63,6 +62,6 @@ export const FinanciadaInfo = () => {
           </span>
         </p>
       </article>
-    </section>
+    </>
   );
 };

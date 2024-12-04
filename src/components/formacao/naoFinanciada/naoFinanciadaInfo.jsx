@@ -2,7 +2,7 @@ import React from "react";
 
 export const NaoFinanciadaInfo = () => {
   return (
-    <section className="financiada-info-container">
+    <>
       <h1>FORMAÇÃO NÃO FINANCIADA</h1>
       <article>
         <p>
@@ -75,6 +75,6 @@ export const NaoFinanciadaInfo = () => {
           da comunidade.
         </p>
       </article>
-    </section>
+    </>
   );
 };

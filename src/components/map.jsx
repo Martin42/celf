@@ -1,6 +1,6 @@
 import React from "react";
-import useViewport from "../../utils/useViewport";
-import "../../style/aboutStyles/aboutMap.scss";
+import useViewport from "../utils/useViewport";
+import "../style/map.scss";
 
 export const Map = () => {
   const { width } = useViewport();

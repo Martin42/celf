@@ -1,5 +1,6 @@
 import React from "react";
-import "../../style/aboutStyles/aboutForm.scss";
+import "../../style/form.scss";
+
 export const Form = () => {
   return (
     <section className="form-container">

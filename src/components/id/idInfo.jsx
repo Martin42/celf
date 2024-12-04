@@ -11,7 +11,7 @@ export const IdInfo = (props) => {
   ];
 
   return (
-    <section className="financiada-info-container">
+    <section className="formacao-info-container">
       <h1>DETALHES DO CURSO</h1>
       <article>
         {courseDetails.map((detail, index) => (

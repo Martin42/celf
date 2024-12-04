@@ -1,6 +1,6 @@
 import React from "react";
 import Collapsible from "react-collapsible";
-import courses from "../../data/courses.json";
+import courses from "../../../data/courses.json";
 import { Link } from "react-router-dom";
 
 const trigger = (element) => {
@@ -92,7 +92,7 @@ export const FinanciadaCourses = () => {
     "Cursos Extra-Catálogo"
   ];
   return (
-    <section className="financiada-courses-container">
+    <>
       <h1>CURSOS FINANCIADOS</h1>
       <div className="collapsible-courses-container">
         {courseArea.map((element, index) => (
@@ -109,6 +109,6 @@ export const FinanciadaCourses = () => {
           </Collapsible>
         ))}
       </div>
-    </section>
+    </>
   );
 };

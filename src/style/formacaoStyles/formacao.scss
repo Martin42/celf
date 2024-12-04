@@ -1,6 +1,6 @@
 @use "../variables" as *;
 
-.financiada-container {
+.formacao-container {
   margin: $margin-mobile;
   display: flex;
   flex-direction: column;
@@ -50,12 +50,12 @@
   }
 }
 
-.financiada-info-container {
-  @extend .financiada-container;
+.formacao-info-container {
+  @extend .formacao-container;
 }
 
-.financiada-courses-container {
-  @extend .financiada-container;
+.formacao-courses-container {
+  @extend .formacao-container;
   margin-bottom: $spacing-xxl;
 }
 

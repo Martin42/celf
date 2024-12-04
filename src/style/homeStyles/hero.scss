@@ -1,66 +1,21 @@
 @use "../variables" as *;
 
-// Base Styles
-
-h1 {
-  font-size: $font-size-3xl;
-
-  @media (min-width: $breakpoint-md) {
-    font-size: $font-size-4xl;
-  }
-  font-weight: $font-weight-bold;
-}
-
-// HERO HOME
-$hero-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/wtugdfsshkxpftthzexc.webp";
-$hero-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/ge7dsgnbgnb4tv13afpf.webp";
-$hero-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/t4qfnfne7qnwhpvqrpei.webp";
-$background-overlay: rgba(33, 33, 33, 0.45);
-
-//  Mixin
-@mixin background-with-overlay($background-url) {
-  background:
-    linear-gradient($background-overlay, $background-overlay),
-    url($background-url) no-repeat center center;
-  background-size: cover;
-}
-
 .hero-container {
   position: relative;
   height: 25rem;
   @media (min-width: $breakpoint-md) {
     height: 28rem;
   }
-
   display: flex;
   align-items: center;
   overflow: hidden;
   justify-content: center;
-}
-
-.hero-home-bg,
-.hero-about-bg,
-.hero-financiada-bg,
-.hero-nao-financiada-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  z-index: 0;
-}
-
-.hero-home-bg {
-  @include background-with-overlay($hero-background-mobile-url);
-
-  @media (min-width: $breakpoint-xs) {
-    @include background-with-overlay($hero-background-tablet-url);
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    @include background-with-overlay($hero-background-desktop-url);
+  h1 {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
   }
 }
 
@@ -92,53 +47,47 @@ $background-overlay: rgba(33, 33, 33, 0.45);
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;
-
   @media (min-width: $breakpoint-xs) {
     text-align: center;
   }
 }
 
-// About
-.about-container {
-  margin: $margin-mobile;
+.hero-home-bg,
+.hero-about-bg,
+.hero-financiada-bg,
+.hero-nao-financiada-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  z-index: 0;
+}
+
+// HERO HOME
+$hero-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/wtugdfsshkxpftthzexc.webp";
+$hero-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/ge7dsgnbgnb4tv13afpf.webp";
+$hero-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/t4qfnfne7qnwhpvqrpei.webp";
+$background-overlay: rgba(33, 33, 33, 0.45);
+
+@mixin background-with-overlay($background-url) {
+  background:
+    linear-gradient($background-overlay, $background-overlay),
+    url($background-url) no-repeat center center;
+  background-size: cover;
+}
+
+.hero-home-bg {
+  @include background-with-overlay($hero-background-mobile-url);
 
   @media (min-width: $breakpoint-xs) {
-    margin: $margin-tablet;
-  }
-
-  @media (min-width: $breakpoint-md) {
-    margin: $margin-laptop;
+    @include background-with-overlay($hero-background-tablet-url);
   }
 
   @media (min-width: $breakpoint-lg) {
-    margin: $margin-desktop;
-  }
-
-  h1 {
-    margin-bottom: $spacing-md;
-    @media (min-width: $breakpoint-sm) {
-      margin-bottom: $spacing-lg;
-    }
-  }
-
-  p {
-    text-indent: 20px;
-    line-height: 132.075%;
-    font-weight: $font-weight-light;
-
-    @media (min-width: $breakpoint-sm) {
-      line-height: normal;
-    }
-    &:not(:last-child) {
-      margin-bottom: $spacing-xs;
-    }
-  }
-
-  span {
-    font-weight: $font-weight-normal;
-    @media (min-width: $breakpoint-sm) {
-      font-weight: $font-weight-bold;
-    }
+    @include background-with-overlay($hero-background-desktop-url);
   }
 }
 
@@ -195,24 +144,6 @@ $financiada-background-overlay: rgba(33, 33, 33, 0.1);
   }
 }
 
-.emd-logo {
-  height: 70px;
-  width: auto;
-}
-
-.certification-logo-container {
-  display: flex;
-  margin: 1rem;
-  gap: $spacing-md;
-  align-self: center;
-  position: absolute;
-  bottom: 0;
-  img {
-    height: 35px;
-    width: auto;
-  }
-}
-
 // HERO NAO FINANCIADA
 $nao-financiada-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-mobile-bg_idrxin.webp";
 $nao-financiada-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-desktop-bg_d9txho.webp";
@@ -245,5 +176,23 @@ $nao-financiada-background-overlay: rgba(33, 33, 33, 0.2);
     @include background-financiada-with-overlay(
       $nao-financiada-background-desktop-url
     );
+  }
+}
+
+.emd-logo {
+  height: 70px;
+  width: auto;
+}
+
+.certification-logo-container {
+  display: flex;
+  margin: 1rem;
+  gap: $spacing-md;
+  align-self: center;
+  position: absolute;
+  bottom: 0;
+  img {
+    height: 35px;
+    width: auto;
   }
 }
