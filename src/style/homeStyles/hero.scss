@@ -12,16 +12,59 @@
   justify-content: center;
 }
 
-.hero-content {
+.hero-img-wrapper,
+.clearer-hero-img-wrapper {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  img {
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    z-index: 0;
+  }
+}
+
+.clearer-hero-img-wrapper {
+  &::before {
+    background: linear-gradient(
+      $dimmer-background-overlay,
+      $dimmer-background-overlay
+    );
+  }
+}
+
+.hero-img-wrapper {
+  &::before {
+    background: linear-gradient($background-overlay, $background-overlay);
+  }
+}
+
+.hero-content {
+  position: absolute;
   margin: $margin-mobile;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-
+  z-index: 1;
   @media (min-width: $breakpoint-xs) {
     align-items: center;
   }
@@ -29,7 +72,6 @@
   gap: $spacing-md;
   p {
     font-weight: $font-weight-normal;
-
     @media (min-width: $breakpoint-md) {
       font-size: $font-size-lg;
     }
@@ -43,132 +85,8 @@
   @media (min-width: $breakpoint-xs) {
     text-align: center;
   }
-}
-
-.hero-home-bg,
-.hero-about-bg,
-.hero-financiada-bg,
-.hero-nao-financiada-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  z-index: 0;
-}
-
-// HERO HOME
-$hero-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/wtugdfsshkxpftthzexc.webp";
-$hero-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/ge7dsgnbgnb4tv13afpf.webp";
-$hero-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/t4qfnfne7qnwhpvqrpei.webp";
-$background-overlay: rgba(33, 33, 33, 0.45);
-
-@mixin background-with-overlay($background-url) {
-  background:
-    linear-gradient($background-overlay, $background-overlay),
-    url($background-url) no-repeat center center;
-  background-size: cover;
-}
-
-.hero-home-bg {
-  @include background-with-overlay($hero-background-mobile-url);
-
-  @media (min-width: $breakpoint-xs) {
-    @include background-with-overlay($hero-background-tablet-url);
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    @include background-with-overlay($hero-background-desktop-url);
-  }
-}
-
-// HERO ABOUT
-$about-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553953/about-mobile-bg_u3jfja.webp";
-$about-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553953/about-tablet-bg_d3ceie.webp";
-$about-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553954/about-desktop-bg_upkdsl.webp";
-
-.hero-about-bg {
-  @include background-with-overlay($about-background-mobile-url);
-
-  @media (min-width: $breakpoint-xs) {
-    @include background-with-overlay($about-background-tablet-url);
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    @include background-with-overlay($about-background-desktop-url);
-  }
-}
-
-// HERO FINANCIADA
-
-$financiada-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554084/financiada-mobile-bg_zhuvoa.webp";
-$financiada-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554085/financiada-tablet-bg_xknous.webp";
-$financiada-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554085/financiada-desktop-bg_c5kh8l.webp";
-$financiada-background-overlay: rgba(33, 33, 33, 0.1);
-
-//  Mixin
-@mixin background-financiada-with-overlay($background-url) {
-  background:
-    linear-gradient(
-      $financiada-background-overlay,
-      $financiada-background-overlay
-    ),
-    url($background-url) no-repeat center center;
-  background-size: cover;
-}
-
-.hero-financiada-bg {
-  @include background-financiada-with-overlay(
-    $financiada-background-mobile-url
-  );
-
-  @media (min-width: $breakpoint-xs) {
-    @include background-financiada-with-overlay(
-      $financiada-background-tablet-url
-    );
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    @include background-financiada-with-overlay(
-      $financiada-background-desktop-url
-    );
-  }
-}
-
-// HERO NAO FINANCIADA
-$nao-financiada-background-mobile-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-mobile-bg_idrxin.webp";
-$nao-financiada-background-tablet-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-desktop-bg_d9txho.webp";
-$nao-financiada-background-desktop-url: "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-desktop-bg_d9txho.webp";
-$nao-financiada-background-overlay: rgba(33, 33, 33, 0.2);
-
-//  Mixin
-@mixin background-nao-financiada-with-overlay($background-url) {
-  background:
-    linear-gradient(
-      $nao-financiada-background-overlay,
-      $nao-financiada-background-overlay
-    ),
-    url($background-url) no-repeat center center;
-  background-size: cover;
-}
-
-.hero-nao-financiada-bg {
-  @include background-nao-financiada-with-overlay(
-    $nao-financiada-background-mobile-url
-  );
-
-  @media (min-width: $breakpoint-xs) {
-    @include background-nao-financiada-with-overlay(
-      $nao-financiada-background-tablet-url
-    );
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    @include background-financiada-with-overlay(
-      $nao-financiada-background-desktop-url
-    );
+  #aprendizagem {
+    text-align: center;
   }
 }
 

@@ -113,15 +113,37 @@
 }
 
 .courses-card-img {
-  padding: 1rem 2rem;
-  min-height: 8rem;
   border-radius: $border-radius-base $border-radius-base 0 0;
   display: flex;
   align-items: end;
   overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      $dimmer-background-overlay,
+      $dimmer-background-overlay
+    );
+  }
+
   span {
     color: white;
     font-weight: $font-weight-bold;
+    position: absolute;
+    padding: 1rem 2rem;
+    z-index: 1;
+  }
+  img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    filter: blur(1.5px);
+    z-index: 0;
   }
 }
 
@@ -132,13 +154,13 @@
   padding: 1rem 2rem;
   justify-content: space-between;
   flex-shrink: 0;
-  gap: $spacing-sm;
+  gap: $spacing-md;
   a {
     align-self: flex-end;
   }
 }
 
-.courses-card-text{
+.courses-card-text {
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;
@@ -158,102 +180,4 @@
   flex-direction: column;
   gap: $spacing-xs;
   text-align: center;
-}
-
-// Course Card Images
-$background-overlay: rgba(33, 33, 33, 0.2);
-
-// Mixin
-@mixin course-card-bg($mobile-url, $desktop-url) {
-  background:
-    linear-gradient($background-overlay, $background-overlay),
-    url($mobile-url) no-repeat center center;
-  background-size: cover;
-
-  @media (min-width: $breakpoint-md) {
-    background:
-      linear-gradient($background-overlay, $background-overlay),
-      url($desktop-url) no-repeat center center;
-    background-size: cover;
-  }
-}
-
-// Course Card URLs (using a map for cleaner code)
-$course-images: (
-  "C9241":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732719708/9214-mobile-bg_autypq.webp",
-  "C10785":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/19785-mobile-bg_l2xibm.webp",
-  "C10759":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/10759-mobile-bg_pannjm.webp",
-  "C0753":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/0753-mobile-bg_xlzqxe.webp",
-  "C0755":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0755-mobile-bg_zeg2kj.webp",
-  "C0779":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0779-mobile-bg_gj9gsp.webp",
-  "C10672":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/10672-mobile-bg_mio3ku.webp",
-  "C0798":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0798-mobile-bg_zk0xs3.webp",
-  "C0664":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0664-mobile-bg_xxfbtr.webp",
-  "C0668":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0668-mobile-bg_shhpzj.webp",
-  "C0616":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0616-mobile-bg_h54ldg.webp",
-  "CECOS":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/ECOS-mobile-bg_zxydgy.webp",
-  "CECRO":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECRO-mobile-bg_f8vhea.webp"
-);
-
-$course-images-desktop: (
-  "C9241":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732719709/9214-desktop-bg_pgswei.webp",
-  "C10785":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/19785-desktop-bg_uxqzds.webp",
-  "C10759":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/10759-desktop-bg_rkdedm.webp",
-  "C0753":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807130/0753-desktop-bg_dprqf3.webp",
-  "C0755":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0755-desktop-bg_ymolo1.webp",
-  "C0779":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/0779-desktop-bg_fajsmf.webp",
-  "C10672":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/10672-desktop-bg_xxebvg.webp",
-  "C0798":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/0798-desktop-bg_odifd0.webp",
-  "C0664":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0664-desktop-bg_o9zzmn.webp",
-  "C0668":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0668-deskop-bg_vi9h38.webp",
-  "C0616":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/0616-desktop-bg_layapn.webp",
-  "CECOS":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECOS-desktop-bg_sewkqd.webp",
-  "CECRO":
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECRO-desktop-bg_hej8dj.webp"
-);
-
-// Loop through the course images and apply the mixin
-@each $class, $mobile-url in $course-images {
-  $desktop-url: map-get($course-images-desktop, $class);
-
-  .#{$class} {
-    @include course-card-bg($mobile-url, $desktop-url);
-  }
-}
-
-// ID Backgrounds
-.hero-id-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  z-index: 0;
 }

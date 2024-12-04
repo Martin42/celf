@@ -10,7 +10,8 @@
       "Identificar as ferramentas do e-marketing e do e-commerce;",
       "Aplicar as ferramentas de gestão de informação e da comunicação, criando uma relação de interatividade, centrada nas necessidades dos consumidores."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732719708/9214-mobile-bg_autypq.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732719709/9214-desktop-bg_pgswei.webp"
   },
 
   {
@@ -25,13 +26,16 @@
       "Medir e analisar uma campanha paga nas diversas redes sociais.",
       "Definir planos de ação para otimização contínua."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/19785-mobile-bg_l2xibm.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/19785-desktop-bg_uxqzds.webp"
   },
 
   {
     "id": "10759",
     "nome": "Teletrabalho",
     "area": "Técnico de Comunicação",
+    "carga": "25 Horas",
+    "pontos": "2.25",
     "objetivos": [
       "Reconhecer o enquadramento legal, as modalidades de teletrabalho e o seu impacto para a organização e trabalhadores/as.",
       "Identificar o perfil e papel do/a teletrabalhador/a no contexto dos novos desafios laborais e ocupacionais e das políticas organizacionais.",
@@ -40,7 +44,8 @@
       "Aplicar as normas de segurança, confidencialidade e proteção de dados organizacionais nos processos de comunicação e informação em regime de teletrabalho.",
       "Planear e organizar o dia de trabalho em regime de teletrabalho, assegurando a conciliação da vida profissional com a vida pessoal e familiar."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/10759-mobile-bg_pannjm.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/10759-desktop-bg_rkdedm.webp"
   },
 
   {
@@ -54,7 +59,8 @@
       "Operar utilitários de antivírus.",
       "Executar tarefas de compressão e descompressão de ficheiros."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/0753-mobile-bg_xlzqxe.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807130/0753-desktop-bg_dprqf3.webp"
   },
 
   {
@@ -68,7 +74,8 @@
       "Efectuar impressões em série.",
       "Elaborar e utilizar macros e formulários."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0755-mobile-bg_zeg2kj.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0755-desktop-bg_ymolo1.webp"
   },
 
   {
@@ -81,7 +88,8 @@
       "Construir e utilizar apresentações gráficas.",
       "Aplicar elementos dinâmicos (som e imagem) às apresentações gráficas."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0779-mobile-bg_gj9gsp.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/0779-desktop-bg_fajsmf.webp"
   },
 
   {
@@ -95,7 +103,8 @@
       "Reconhecer as implicações do Regulamento Geral da Proteção de Dados (RGPD) na respetiva atividade profissional.",
       "Reconhecer a importância da integração do RGPD com as diferentes normas dos Sistemas de Gestão (Qualidade, Ambiente, Segurança, Segurança Informática, …)."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/10672-mobile-bg_mio3ku.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/10672-desktop-bg_xxebvg.webp"
   },
 
   {
@@ -107,7 +116,8 @@
     "objetivos": [
       "Instalar e configurar utilitários sobre o sistema operativo (SO)."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0798-mobile-bg_zk0xs3.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/0798-desktop-bg_odifd0.webp"
   },
 
   {
@@ -117,7 +127,8 @@
     "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": ["Utilizar uma aplicação informática de contabilidade."],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0664-mobile-bg_xxfbtr.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0664-desktop-bg_o9zzmn.webp"
   },
 
   {
@@ -129,7 +140,8 @@
     "objetivos": [
       "Executar o apoio administrativo e logístico, associado à função de aprovisionamento."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0668-mobile-bg_shhpzj.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0668-deskop-bg_vi9h38.webp"
   },
 
   {
@@ -142,7 +154,8 @@
       "Utilizar uma aplicação informática da área de gestão de pessoal.",
       "Utilizar base de dados com ligação a outras aplicações."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807127/0616-mobile-bg_h54ldg.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/0616-desktop-bg_layapn.webp"
   },
 
   {
@@ -152,7 +165,8 @@
     "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/ECOS-mobile-bg_zxydgy.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECOS-desktop-bg_sewkqd.webp"
   },
 
   {
@@ -162,14 +176,15 @@
     "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
-    "url": ""
-  }, 
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECRO-mobile-bg_f8vhea.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECRO-desktop-bg_hej8dj.webp"
+  },
 
   {
     "id": "6558",
     "nome": "Atividade Profissional do Técnico Auxiliar de Saúde",
     "area": "Técnico Auxiliar de Saúde",
-    "carga":"25 Horas",
+    "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": [
       "Identificar as principais atividades do perfil profissional do/a Técnico/a Auxiliar de Saúde.",
@@ -188,15 +203,15 @@
       "Explicar a importância de agir de acordo com normas e/ou procedimentos definidos no âmbito das suas atividades.",
       "Explicar a importância de adequar a sua ação profissional a diferentes públicos e culturas.",
       "Explicar a importância de adequar a sua ação profissional a diferentes contextos institucionais no âmbito dos cuidados de saúde."
-  ],
-  "url": ""
+    ],
+    "url": ""
   },
 
   {
     "id": "6570",
     "nome": "Abordagem Geral de Noções Básicas de Primeiros Socorros.",
-    "area":"Técnico Auxiliar de Saúde",
-    "carga":"25 Horas",
+    "area": "Técnico Auxiliar de Saúde",
+    "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": [
       "Descrever o que é o Sistema Integrado de Emergência Médica (SIEM) e quais os seus intervenientes.",
@@ -232,15 +247,15 @@
       "Identificar as situações específicas que requerem a intervenção do profissional de Saúde.",
       "Explicar que as tarefas que se integram no âmbito da sua intervenção terão de ser sempre executadas com orientação e supervisão de um profissional de saúde.",
       "Identificar as tarefas que têm de ser executadas sob supervisão direta do profissional de saúde e aquelas que podem ser executadas sozinho."
-  ],
-  "url": ""
+    ],
+    "url": ""
   },
-  
+
   {
     "id": "3538",
     "nome": "Saúde da Pessoa Idosa - Cuidados Básicos",
     "area": "Técnico em Geriatria",
-    "carga":"25 Horas",
+    "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": [
       "Reconhecer alguns aspetos do envelhecimento da população.",
@@ -254,7 +269,7 @@
   {
     "id": "3546",
     "nome": "Prevenção e Primeiros Socorros -­ Geriatria",
-    "area":"Técnico em Geriatria",
+    "area": "Técnico em Geriatria",
     "carga": "50 Horas",
     "pontos": "4.5",
     "objetivos": [
@@ -270,7 +285,7 @@
     "id": "3564",
     "nome": "Primeiros socorros",
     "area": "Assistente Familiar e de Apoio à Comunidade",
-    "carga":"25 Horas",
+    "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": [
       "Identificar os diferentes tipos de acidentes.",
@@ -283,8 +298,8 @@
   {
     "id": "8854",
     "nome": "Prestação de Cuidados Humanos Básicos - Alimentação",
-    "area":"Assistente Familiar e de Apoio à Comunidade",
-    "carga":"25 Horas",
+    "area": "Assistente Familiar e de Apoio à Comunidade",
+    "carga": "25 Horas",
     "pontos": "2.25",
     "objetivos": [
       "Aplicar técnicas de prestação de cuidados de alimentação.",

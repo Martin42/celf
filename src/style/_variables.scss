@@ -56,3 +56,8 @@ $breakpoint-xs: 480px; // Mobile portrait
 $breakpoint-sm: 768px; // Tablet
 $breakpoint-md: 1024px; // Small desktop
 $breakpoint-lg: 1200px; // Large desktop
+
+// Background Overlays
+
+$background-overlay: rgba(33, 33, 33, 0.3);
+$dimmer-background-overlay: rgba(99, 99, 99, 0.15);

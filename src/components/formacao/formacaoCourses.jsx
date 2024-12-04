@@ -67,7 +67,8 @@ const courseCard = (element) => {
 
   return filteredCourses.map((element) => (
     <div className="courses-card-container">
-      <div className={`courses-card-img C${element.id}`}>
+      <div className="courses-card-img">
+        <img src={element.mobile} alt="course" loading="lazy" />
         <span>UFCD {element.id}</span>
       </div>
       <div className="courses-card-info">
