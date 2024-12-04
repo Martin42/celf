@@ -18,12 +18,7 @@
   @media (min-width: $breakpoint-lg) {
     margin: $margin-desktop;
   }
-  h1 {
-    color: $color-terciary;
-    font-size: $font-size-xl;
-    @media (min-width: $breakpoint-md) {
-      font-size: $font-size-2xl;
-    }
+  h2 {
     text-align: center;
   }
 }

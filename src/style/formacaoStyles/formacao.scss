@@ -19,14 +19,8 @@
     margin: $margin-desktop;
   }
 
-  h1 {
-    color: $color-terciary;
-    font-size: $font-size-xl;
+  h2 {
     text-align: center;
-
-    @media (min-width: $breakpoint-md) {
-      font-size: $font-size-2xl;
-    }
   }
 
   article {

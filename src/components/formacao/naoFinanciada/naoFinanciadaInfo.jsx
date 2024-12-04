@@ -3,7 +3,7 @@ import React from "react";
 export const NaoFinanciadaInfo = () => {
   return (
     <>
-      <h1>FORMAÇÃO NÃO FINANCIADA</h1>
+      <h2>FORMAÇÃO NÃO FINANCIADA</h2>
       <article>
         <p>
           Os cursos de aprendizagem não financiados oferecem uma proposta

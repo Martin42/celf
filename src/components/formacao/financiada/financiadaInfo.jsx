@@ -3,7 +3,7 @@ import React from "react";
 export const FinanciadaInfo = () => {
   return (
     <>
-      <h1>FORMAÇÃO FINANCIADA</h1>
+      <h2>FORMAÇÃO FINANCIADA</h2>
       <article>
         <p>
           O <span>Projeto Emprego + Digital</span> tem como objetivo estratégico

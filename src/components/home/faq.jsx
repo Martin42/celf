@@ -67,7 +67,7 @@ export const FAQ = () => {
 
   return (
     <section className="faq-container">
-      <h1>PERGUNTAS FREQUENTES</h1>
+      <h2>PERGUNTAS FREQUENTES</h2>
       <div className="collapsible-container">
         {/* Collapsibles here */}
         {questionsData.map((element) => (

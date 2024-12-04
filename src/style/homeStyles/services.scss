@@ -1,6 +1,9 @@
 @use "../variables" as *;
 
 .services-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
   margin: $margin-mobile;
 
   @media (min-width: $breakpoint-xs) {
@@ -16,16 +19,7 @@
     margin: $margin-desktop;
   }
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $spacing-xl;
-  h1 {
-    color: $color-terciary;
-    font-size: $font-size-xl;
-    @media (min-width: $breakpoint-md) {
-      font-size: $font-size-2xl;
-    }
+  h2 {
     text-align: center;
   }
 }

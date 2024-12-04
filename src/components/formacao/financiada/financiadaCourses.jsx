@@ -93,7 +93,7 @@ export const FinanciadaCourses = () => {
   ];
   return (
     <>
-      <h1>CURSOS FINANCIADOS</h1>
+      <h2>CURSOS FINANCIADOS</h2>
       <div className="collapsible-courses-container">
         {courseArea.map((element, index) => (
           <Collapsible
