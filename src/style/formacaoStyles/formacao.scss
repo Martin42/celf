@@ -114,7 +114,7 @@
 
 .courses-card-img {
   padding: 1rem 2rem;
-  height: 8.5rem;
+  min-height: 8rem;
   border-radius: $border-radius-base $border-radius-base 0 0;
   display: flex;
   align-items: end;
@@ -127,11 +127,21 @@
 
 .courses-card-info {
   display: flex;
-  height: 8.5rem;
+  min-height: 8rem;
   flex-direction: column;
   padding: 1rem 2rem;
   justify-content: space-between;
   flex-shrink: 0;
+  gap: $spacing-sm;
+  a {
+    align-self: flex-end;
+  }
+}
+
+.courses-card-text{
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
   p {
     text-indent: unset;
     font-weight: $font-weight-normal;
@@ -140,9 +150,6 @@
     font-size: $font-size-xs;
     color: #4e4e4e;
     font-weight: $font-weight-light;
-  }
-  a {
-    align-self: flex-end;
   }
 }
 

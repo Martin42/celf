@@ -71,7 +71,7 @@ const courseCard = (element) => {
         <span>UFCD {element.id}</span>
       </div>
       <div className="courses-card-info">
-        <div>
+        <div className="courses-card-text">
           <p>{element.nome}</p>
           <span>Presencial/Elearning - {element.carga}</span>
         </div>
