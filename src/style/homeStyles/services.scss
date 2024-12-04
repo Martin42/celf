@@ -1,6 +1,9 @@
 @use "../variables" as *;
 
 .services-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
   margin: $margin-mobile;
 
   @media (min-width: $breakpoint-xs) {
@@ -16,16 +19,7 @@
     margin: $margin-desktop;
   }
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $spacing-xl;
-  h1 {
-    color: $color-terciary;
-    font-size: $font-size-xl;
-    @media (min-width: $breakpoint-md) {
-      font-size: $font-size-2xl;
-    }
+  h2 {
     text-align: center;
   }
 }
@@ -37,6 +31,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    gap: $spacing-desktop;
   }
   align-items: center;
   gap: $spacing-xl;
@@ -87,13 +82,8 @@
   text-align: center;
   font-size: $font-size-lg;
 
-  @media (min-width: $breakpoint-md) {
-    font-weight: $font-weight-bold;
-  }
-
   @media (min-width: $breakpoint-lg) {
     font-size: $font-size-xl;
-    font-weight: $font-weight-bold;
   }
   margin-bottom: $spacing-sm;
 }
@@ -101,8 +91,4 @@
 .card-subtitle {
   text-align: center;
   font-weight: $font-weight-light;
-
-  @media (min-width: $breakpoint-md) {
-    font-weight: $font-weight-normal;
-  }
 }

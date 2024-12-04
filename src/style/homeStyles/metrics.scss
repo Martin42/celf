@@ -1,0 +1,39 @@
+@use "../variables" as *;
+
+.metrics-container {
+  background: linear-gradient(90deg, #116bbe 17.5%, #449aea 75%);
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    padding: 3rem;
+    gap: $spacing-xl;
+  }
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.metrics-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $spacing-xs;
+  @media (min-width: $breakpoint-md) {
+    gap: $spacing-sm;
+  }
+  h2,
+  p {
+    margin: 0;
+    text-align: center;
+    color: white;
+  }
+
+  p {
+    font-weight: $font-weight-light;
+    @media (min-width: $breakpoint-md) {
+      font-weight: $font-weight-normal;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import "../../style/homeStyles/services.scss";
 export const Services = () => {
   return (
     <section className="services-container">
-      <h1>OS NOSSOS SERVIÇOS</h1>
+      <h2>OS NOSSOS SERVIÇOS</h2>
 
       <div className="card-container">
         {/* FORMACAO */}

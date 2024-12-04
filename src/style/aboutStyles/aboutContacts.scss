@@ -1,0 +1,57 @@
+@use "../variables" as *;
+
+// Base Styles
+
+.contacts-container {
+  margin: $margin-mobile;
+
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    margin: $margin-laptop;
+    gap: $spacing-xxl;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin: $margin-desktop;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+  h1 {
+    color: $color-terciary;
+    font-size: $font-size-xl;
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-2xl;
+    }
+    text-align: center;
+  }
+}
+
+.contacts-card-container {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: $spacing-desktop;
+  }
+  //   align-items: center;
+  gap: $spacing-xl;
+}
+
+.contacts-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  @media (min-width: $breakpoint-md) {
+    padding: 2.5rem;
+    width: 18rem;
+  }
+}

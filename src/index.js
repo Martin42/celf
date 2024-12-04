@@ -2,9 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style/index.scss";
-import App from "./App";
-import { Navbar } from "./components/navbar";
 import reportWebVitals from "./reportWebVitals";
+
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Id from "./components/id/Id";
+
+import { Navbar } from "./components/navbar";
+import { Footer } from "./components/footer";
+import Formacao from "./components/formacao/formacao";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,12 +19,17 @@ root.render(
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/formacao" element={""} />
-        <Route path="/empresas" element={""} />
-        <Route path="/projeto" element={""} />
+        <Route path="/" element={<Home />} />
+        <Route path="/formacao/financiada" element={<Formacao />} />
+        <Route path="/formacao/financiada/:id" element={<Id />} />
+
+        <Route path="/formacao/nao-financiada" element={<Formacao />} />
+        <Route path="/formacao/nao-financiada/:id" element={<Id />} />
+        <Route path="/sobre-nos" element={<About />} />
       </Routes>
     </Router>
+
+    <Footer />
   </React.StrictMode>
 );
 

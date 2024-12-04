@@ -1,14 +1,14 @@
 [
   {
     "id": 0,
-    "question": "Qual é a duração dos cursos financiados?",
-    "answer": "Os cursos proporcionados pelo CELF têm a duração de 25h a 50h. Pode obter mais informação sobre cada curso na página 'Formação'"
+    "question": "Qual é a duração das formações financiados?",
+    "answer": "As formações proporcionados pelo CELF têm a duração de 25h a 50h. Pode obter mais informação sobre cada curso na página 'Formação'"
   },
 
   {
     "id": 1,
     "question": "Que tipo de apoio têm estas formações?",
-    "answer": "As formações atuais oferecem um subsídio de alimentação com o valor de 6,00€ por sessão de mínimo de 3h"
+    "answer": "As formações financiadas atuais oferecem um subsídio de alimentação com o valor de 6,00€ por sessão de mínimo de 3h"
   },
 
   {
@@ -20,6 +20,12 @@
   {
     "id": 3,
     "question": "Como me posso inscrever?",
-    "answer": "O nosso site oferece a possibilidade de efetuar uma inscrição simples e rápida."
+    "answer": "O nosso site oferece a possibilidade de efetuar uma inscrição simples e rápida quer seja através de um formulário de inscrição, email ou chamada telefónica."
+  },
+
+  {
+    "id": 4,
+    "question": "Há alguma modalidade adequada a empresas?",
+    "answer": "Oferecemos soluções integradas para apoiar empresas na qualificação contínua dos seus colaboradores, desde planeamento anual da formação, reconhecimento e valorização de competências e formação especializada para habilitar os colaboradores a identificar e prevenir riscos associados à sua atividade"
   }
 ]
