@@ -163,5 +163,133 @@
     "pontos": "2.25",
     "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
     "url": ""
+  }, 
+
+  {
+    "id": "6558",
+    "nome": "Atividade Profissional do Técnico Auxiliar de Saúde",
+    "area": "Técnico Auxiliar de Saúde",
+    "carga":"25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Identificar as principais atividades do perfil profissional do/a Técnico/a Auxiliar de Saúde.",
+      "Identificar os direitos e deveres do/a Técnico/a Auxiliar de Saúde.",
+      "Identificar o papel do/a Técnico/a Auxiliar de Saúde nos diferentes contextos de atuação.",
+      "Identificar quais as implicações éticas que um/a Técnico/a Auxiliar de Saúde deve ter em conta no seu desempenho profissional.",
+      "Identificar a legislação que enquadra o seu vínculo contratual.",
+      "Identificar as principais linhas de orientação de um sistema de avaliação de desempenho.",
+      "Explicar que as tarefas que se integram no âmbito de intervenção do/a Técnico/a Auxiliar de Saúde terão de ser sempre executadas com orientação e supervisão de um profissional de saúde.",
+      "Identificar as tarefas que têm de ser executadas sob supervisão direta do profissional de saúde e aquelas que podem ser executadas sozinho.",
+      "Explicar o dever de agir em função das orientações do Profissional de saúde e sob a sua supervisão.",
+      "Explicar a importância de respeitar os princípios de ética no desempenho das suas funções de Técnico/a Auxiliar de Saúde.",
+      "Explicar a importância da sua atividade para o trabalho de equipa multidisciplinar.",
+      "Explicar a importância de assumir uma atitude pró-ativa na melhoria contínua da qualidade, no âmbito da sua ação profissional.",
+      "Explicar a importância de cumprir as normas de segurança, higiene e saúde no trabalho assim como preservar a sua apresentação pessoal.",
+      "Explicar a importância de agir de acordo com normas e/ou procedimentos definidos no âmbito das suas atividades.",
+      "Explicar a importância de adequar a sua ação profissional a diferentes públicos e culturas.",
+      "Explicar a importância de adequar a sua ação profissional a diferentes contextos institucionais no âmbito dos cuidados de saúde."
+  ],
+  "url": ""
+  },
+
+  {
+    "id": "6570",
+    "nome": "Abordagem geral de noções básicas de primeiros socorros.",
+    "area":"Técnico Auxiliar de Saúde",
+    "carga":"25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Descrever o que é o Sistema Integrado de Emergência Médica (SIEM) e quais os seus intervenientes.",
+      "Descrever como ativar o sistema de emergência médica utilizando o número europeu de socorro '112'.",
+      "Identificar o conceito de cadeia de sobrevivência e identificar os seus elos.",
+      "Explicar a importância da cadeia de sobrevivência e qual o princípio subjacente a cada elo.",
+      "Reconhecer os riscos potenciais para o reanimador.",
+      "Identificar as medidas a adotar para garantir a segurança do reanimador e da vítima.",
+      "Identificar as medidas universais de proteção e reconhecer a sua importância.",
+      "Explicar o conceito de Suporte Básico de Vida (SBV) de acordo com o algoritmo vigente.",
+      "Explicar o conceito de avaliação inicial, via aérea, respiração e circulação.",
+      "Aplicar a sequência de procedimentos que permitam executar o SBV de acordo com o algoritmo vigente.",
+      "Identificar os problemas associados à execução de manobras de SBV.",
+      "Identificar quando e como colocar uma vítima em posição lateral de segurança.",
+      "Identificar as contra-indicações para a posição lateral de segurança.",
+      "Identificar as situações de obstrução parcial e total da via aérea.",
+      "Identificar as causas e os tipos de obstrução da via aérea.",
+      "Aplicar a sequência de atuação perante uma vítima com obstrução da via aérea.",
+      "Identificar situações de perigo através da execução do exame à vítima.",
+      "Identificar as emergências médicas mais frequentes.",
+      "Identificar os principais sinais e sintomas característicos das emergências médicas.",
+      "Aplicar os primeiros socorros adequados a cada emergência médica.",
+      "Identificar os vários tipos de hemorragias.",
+      "Identificar os sinais e sintomas mais comuns das hemorragias.",
+      "Listar e descrever os vários métodos de controlo de hemorragias.",
+      "Controlar uma hemorragia através dos métodos de controlo.",
+      "Identificar os tipos de feridas mais comuns.",
+      "Tratar uma ferida utilizando pensos e ligaduras.",
+      "Identificar os tipos de queimaduras mais comuns.",
+      "Tratar provisoriamente uma queimadura.",
+      "Identificar os traumatismos mais comuns dos membros.",
+      "Reconhecer o que fazer e/ou não fazer nestes casos.",
+      "Identificar as situações específicas que requerem a intervenção do profissional de Saúde.",
+      "Explicar que as tarefas que se integram no âmbito da sua intervenção terão de ser sempre executadas com orientação e supervisão de um profissional de saúde.",
+      "Identificar as tarefas que têm de ser executadas sob supervisão direta do profissional de saúde e aquelas que podem ser executadas sozinho."
+  ],
+  "url": ""
+  },
+  
+  {
+    "id": "3538",
+    "nome": "Saúde da Pessoa Idosa - Cuidados Básicos",
+    "area": "Técnico em Geriatria",
+    "carga":"25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Reconhecer alguns aspetos do envelhecimento da população.",
+      "Descrever as características do Agente em Geriatria.",
+      "Descrever os processos de comunicação e observação.",
+      "Prestar cuidados que proporcionem conforto à pessoa idosa."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "3546",
+    "nome": "Prevenção e primeiros socorros­ geriatria",
+    "area":"Técnico em Geriatria",
+    "carga": "50 Horas",
+    "pontos": "4.5",
+    "objetivos": [
+      "Identificar os fatores e utilizar as medidas que contribuem para a prevenção de úlceras de pressão.",
+      "Reconhecer e utilizar medidas de prevenção do risco de acidente para a pessoa idosa no domicílio.",
+      "Identificar alguns fatores que contribuem para o isolamento e imobilidade da pessoa idosa.",
+      "Atuar em situações de emergência."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "3564",
+    "nome": "Primeiros socorros",
+    "area": "Assistente Familiar e de Apoio à Comunidade",
+    "carga":"25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Identificar os diferentes tipos de acidentes.",
+      "Reconhecer o serviço nacional de proteção civil.",
+      "Reconhecer a importância da prevenção de acidentes e de doenças profissionais."
+    ],
+    "url": ""
+  },
+
+  {
+    "id": "8854",
+    "nome": "Prestação de cuidados humanos básicos alimentação",
+    "area":"Assistente Familiar e de Apoio à Comunidade",
+    "carga":"25 Horas",
+    "pontos": "2.25",
+    "objetivos": [
+      "Aplicar técnicas de prestação de cuidados de alimentação.",
+      "Efetuar a eliminação de resíduos alimentares.",
+      "Aplicar as técnicas de comunicação, de acordo com o tipo de interlocutor."
+    ]
   }
 ]

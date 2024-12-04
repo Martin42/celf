@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const IdInfo = (props) => {
   const { nome, id, carga, pontos, objetivos } = props.filteredCourses;
@@ -10,9 +10,15 @@ export const IdInfo = (props) => {
     { label: "Pontos de Crédito", value: pontos }
   ];
 
+  const [areObjectivesVisible, setObjectivesVisible] = useState(false);
+
+  const toggleObjectivesVisibility = () => {
+    setObjectivesVisible(!areObjectivesVisible);
+  };
+
   return (
     <section className="formacao-info-container">
-      <h1>DETALHES DO CURSO</h1>
+      <h2>DETALHES DO CURSO</h2>
       <article>
         {courseDetails.map((detail, index) => (
           <p key={index}>
@@ -27,11 +33,18 @@ export const IdInfo = (props) => {
             <span>Objetivos da UFCD</span>
           </p>
 
-          <ul>
-            {objetivos.map((e, index) => (
-              <li key={index}>{e}</li>
-            ))}
-          </ul>
+          {/* TODO: Style this text to look like a link */}
+          <p onClick={toggleObjectivesVisibility}>
+            {areObjectivesVisible ? "Esconder Objetivos" : "Mostrar Objetivos"}
+          </p>
+
+          {areObjectivesVisible && (
+            <ul>
+              {objetivos.map((e, index) => (
+                <li key={index}>{e}</li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <div>

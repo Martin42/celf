@@ -32,7 +32,7 @@ export const IdForm = (props) => {
   const { id, nome } = props.filteredCourses;
   return (
     <section className="form-container">
-      <h1>PRÉ-INSCRIÇÃO</h1>
+      <h2>PRÉ-INSCRIÇÃO</h2>
       <article>
         <p>
           No seguinte formulário poderá efetuar a pré-inscrição na formação
