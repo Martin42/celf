@@ -4,7 +4,7 @@ import "../../style/form.scss";
 export const Form = () => {
   return (
     <section className="form-container">
-      <h1>TEM ALGUMA DÚVIDA</h1>
+      <h2>TEM ALGUMA DÚVIDA</h2>
       <form action="submit">
         <div>
           <label htmlFor="email">Email*</label>

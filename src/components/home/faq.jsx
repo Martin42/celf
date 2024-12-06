@@ -80,7 +80,7 @@ export const FAQ = () => {
             trigger={triggerIsOpen(element.question)}
             triggerWhenOpen={trigger(element.question)}
           >
-            <p>{element.answer}</p>
+            <p className="faq-answer">{element.answer}</p>
           </Collapsible>
         ))}
       </div>

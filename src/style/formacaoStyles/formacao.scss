@@ -11,12 +11,13 @@
   }
 
   @media (min-width: $breakpoint-md) {
-    margin: $margin-laptop;
+    align-self: center;
+    width: 70vw;
     gap: $spacing-xxl;
   }
 
   @media (min-width: $breakpoint-lg) {
-    margin: $margin-desktop;
+    width: 50vw;
   }
 
   h2 {

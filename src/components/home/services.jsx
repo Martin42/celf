@@ -72,9 +72,7 @@ export const Services = () => {
           </svg>
           <div>
             <p className="card-title">Formação</p>
-            <p className="card-subtitle">
-              Oferecemos formação especializada em várias áreas de ensino
-            </p>
+            <p className="card-subtitle">Oferecemos formação especializada</p>
           </div>
           <button type="button" className="card-button">
             Saiba Mais{" "}

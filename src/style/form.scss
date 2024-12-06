@@ -35,13 +35,11 @@
   @media (min-width: $breakpoint-md) {
     align-self: center;
     gap: $spacing-xxl;
-    margin: $margin-laptop;
     margin-bottom: $spacing-desktop;
     width: 70vw;
   }
 
   @media (min-width: $breakpoint-lg) {
-    margin: $margin-desktop;
     margin-bottom: $spacing-desktop;
     width: 50vw;
   }

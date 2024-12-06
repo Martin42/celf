@@ -76,7 +76,9 @@
 }
 
 .Collapsible__contentInner {
-  margin-top: $spacing-sm;
+  .faq-answer {
+    margin-top: $spacing-sm;
+  }
 }
 
 .Collapsible__contentInner p {
