@@ -36,7 +36,7 @@ export const FinanciadaInfo = () => {
               href="https://op.europa.eu/webpub/empl/european-pillar-of-social-rights/pt/"
               target="blank_"
             >
-              Plano de Ação do Pilar Europeu dos Direitos Sociais
+              Plano de Ação do Pilar Europeu dos Direitos Sociais.
             </a>
           </li>
         </ul>
@@ -46,7 +46,7 @@ export const FinanciadaInfo = () => {
           hesite em nos contactar:
         </p>
         <ul>
-          <li>Residência na região norte de Portugal</li>
+          <li>Residência na região norte de Portugal;</li>
           <li>Idade igual ou superior a 18 anos e inferior a 66 anos;</li>
           <li>Ativos empregados por conta de outrem ou;</li>
           <li>

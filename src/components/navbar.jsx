@@ -116,10 +116,10 @@ export const Navbar = () => {
                     fill="none"
                     className={`chevron ${isDropdownOpen ? "rotate" : ""}`}
                   >
-                    <g clip-path="url(#clip0_864_462)">
+                    <g clipPath="url(#clip0_864_462)">
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M7.52623 7.27113L3.7549 3.4998L4.69757 2.55713L7.99757 5.85713L11.2976 2.55713L12.2402 3.4998L8.4689 7.27113C8.34388 7.39611 8.17434 7.46632 7.99757 7.46632C7.82079 7.46632 7.65125 7.39611 7.52623 7.27113Z"
                         fill="black"
                       />

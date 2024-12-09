@@ -21,15 +21,15 @@ export const Services = () => {
               <path
                 d="M6.47656 14.1258L34.0002 3L61.5239 14.1258L34.0002 25.2517L6.47656 14.1258Z"
                 stroke="#D43650"
-                stroke-width="2"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinejoin="round"
               />
               <path
                 d="M61.5237 14.2715V26.4874M18.9878 19.9867V36.4662C18.9878 36.4662 25.2854 42.7351 34 42.7351C42.7159 42.7351 49.0135 36.4662 49.0135 36.4662V19.9867"
                 stroke="#D43650"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </g>
             <defs>
@@ -40,9 +40,9 @@ export const Services = () => {
                 width="62.0474"
                 height="46.7349"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
@@ -105,13 +105,13 @@ export const Services = () => {
               <path
                 d="M32.6663 28.2229C39.9372 28.2229 45.833 22.3521 45.833 15.1104C45.833 7.87083 39.9372 2 32.6663 2C25.3955 2 19.5059 7.87083 19.5059 15.1104C19.5059 18.4646 21.0351 20.9042 21.0351 20.9042L5.11424 36.7583C4.39966 37.4708 3.39966 39.3208 5.11424 41.0292L6.95174 42.8583C7.66633 43.4688 9.46216 44.3229 10.9309 42.8583L13.0767 40.725C15.2184 42.8583 17.6684 41.6396 18.5872 40.4188C20.1163 38.2854 18.2809 36.15 18.2809 36.15L18.8934 35.5396C21.8309 38.4688 24.4038 36.7604 25.3226 35.5396C26.8538 33.4063 25.3226 31.2708 25.3226 31.2708C24.7101 30.0521 23.4851 30.0521 25.0163 28.5271L26.8538 26.6979C28.3226 27.9167 31.3434 28.2229 32.6705 28.2229H32.6663Z"
                 stroke="#D43650"
-                stroke-width="2"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinejoin="round"
               />
               <path
                 d="M37.26 15.1126C37.2572 16.3278 36.772 17.4922 35.9109 18.3497C35.0499 19.2073 33.8835 19.6877 32.6683 19.6855C31.4531 19.6877 30.2868 19.2073 29.4257 18.3497C28.5647 17.4922 28.0794 16.3278 28.0767 15.1126C28.0778 14.5107 28.1974 13.9149 28.4287 13.3593C28.6601 12.8036 28.9986 12.299 29.425 11.8741C29.8514 11.4493 30.3572 11.1126 30.9137 10.8833C31.4702 10.654 32.0664 10.5365 32.6683 10.5376C33.2702 10.5365 33.8664 10.654 34.4229 10.8833C34.9794 11.1126 35.4853 11.4493 35.9117 11.8741C36.3381 12.299 36.6766 12.8036 36.9079 13.3593C37.1393 13.9149 37.2589 14.5107 37.26 15.1126Z"
                 stroke="#D43650"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </g>
             <defs>
@@ -122,9 +122,9 @@ export const Services = () => {
                 width="48.6655"
                 height="48.667"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
@@ -189,16 +189,16 @@ export const Services = () => {
               <path
                 d="M40.0195 44H8.89488C7.5915 44 6.3415 43.4894 5.41987 42.5806C4.49824 41.6718 3.98047 40.4391 3.98047 39.1538C3.98047 37.8686 4.49824 36.6359 5.41987 35.7271C6.3415 34.8183 7.5915 34.3077 8.89488 34.3077H36.7432M36.7432 34.3077C37.6121 34.3077 38.4455 33.9673 39.0599 33.3614C39.6743 32.7555 40.0195 31.9338 40.0195 31.0769V5.23077C40.0195 4.37392 39.6743 3.55216 39.0599 2.94627C38.4455 2.34038 37.6121 2 36.7432 2H8.89488C7.61389 1.99955 6.38334 2.49235 5.46539 3.37342C4.54744 4.25448 4.01463 5.45417 3.98047 6.71692V39.0246M36.7432 34.3077V44"
                 stroke="#D43650"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M25.4438 16.5448H33.0316L24.972 27.7653H33.5034M10.5728 19.7239L14.0653 9.38865C14.1525 9.13103 14.3196 8.90696 14.543 8.74811C14.7664 8.58926 15.0348 8.50366 15.3102 8.50342C15.877 8.50342 16.3816 8.8588 16.5618 9.38865L20.0543 19.7239M11.8374 15.9826H18.7896"
                 stroke="#D43650"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </g>
             <defs>
@@ -209,9 +209,9 @@ export const Services = () => {
                 width="43.0391"
                 height="49"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"

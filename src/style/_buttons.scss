@@ -7,6 +7,12 @@
   padding: 0.75rem 1.5rem;
   border: 2px solid white;
   border-radius: 6px;
+  &:hover{
+    background-color: white;
+    color: $color-terciary;
+    transition: 0.2s;
+    cursor: pointer;
+  }
 }
 
 .trigger-button {
@@ -22,4 +28,9 @@
   border: none;
   padding: 0.75rem 1.5rem;
   box-shadow: $box-shadow;
+  &:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0.9;
+  }
 }

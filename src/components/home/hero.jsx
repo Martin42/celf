@@ -1,6 +1,7 @@
 import React from "react";
 import "../../style/homeStyles/hero.scss";
 import "../../style/_buttons.scss";
+import { Link } from "react-router-dom";
 
 const mobileHomeUrl =
   "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/wtugdfsshkxpftthzexc.webp";
@@ -29,9 +30,11 @@ export const Hero = () => {
           <h1>INVISTA NA SUA FORMAÇÃO</h1>
           <p>Adquira novas competências para enfrentar o mundo de trabalho</p>
         </div>
-        <button type="button" className="white-button">
-          Oferta Formativa
-        </button>
+        <Link to={"/formacao/financiada"}>
+          <button type="button" className="white-button">
+            Oferta Formativa
+          </button>
+        </Link>
       </div>
     </section>
   );

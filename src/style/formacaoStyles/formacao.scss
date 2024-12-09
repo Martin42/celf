@@ -4,7 +4,7 @@
   margin: $margin-mobile;
   display: flex;
   flex-direction: column;
-  gap: $spacing-xl;
+  gap: $spacing-lg;
 
   @media (min-width: $breakpoint-xs) {
     margin: $margin-tablet;
@@ -13,7 +13,7 @@
   @media (min-width: $breakpoint-md) {
     align-self: center;
     width: 70vw;
-    gap: $spacing-xxl;
+    gap: $spacing-xl;
   }
 
   @media (min-width: $breakpoint-lg) {

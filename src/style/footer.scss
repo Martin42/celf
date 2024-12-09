@@ -12,6 +12,7 @@
     font-size: $font-size-xs;
     color: #989d9e;
     text-decoration: none;
+    width: max-content;
   }
 }
 
@@ -61,7 +62,7 @@
 .useful-links-container {
   display: flex;
   flex-direction: column;
-  gap: $spacing-sm;
+  gap: $spacing-md;
   p {
     margin: 0;
   }

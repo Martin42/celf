@@ -31,6 +31,13 @@ export const Footer = () => {
         <div className="useful-links-container">
           <h2>Links Úteis</h2>
           <a href="/">Proteção de Dados</a>
+          <a
+            href="https://www.livroreclamacoes.pt/inicio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Livro de Reclamações
+          </a>
           <a href="https://www.iefp.pt/" target="_blank" rel="noreferrer">
             Centro de Emprego
           </a>

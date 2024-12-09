@@ -15,12 +15,12 @@ export const Contacts = () => {
             fill="none"
             className="card-svg"
           >
-            <g clip-path="url(#clip0_862_636)">
+            <g clipPath="url(#clip0_862_636)">
               <g filter="url(#filter0_d_862_636)">
                 <path
                   d="M26.2253 29.7719C27.7568 31.3035 29.834 32.1639 32 32.1639C33.0724 32.1639 34.1344 31.9527 35.1252 31.5422C36.1161 31.1318 37.0163 30.5303 37.7747 29.7719C38.533 29.0136 39.1346 28.1133 39.545 27.1225C39.9554 26.1317 40.1666 25.0697 40.1666 23.9972C40.1666 21.8313 39.3062 19.7541 37.7747 18.2225C36.2431 16.691 34.1659 15.8306 32 15.8306C29.834 15.8306 27.7568 16.691 26.2253 18.2225C24.6937 19.7541 23.8333 21.8313 23.8333 23.9972C23.8333 26.1632 24.6937 28.2404 26.2253 29.7719ZM32 56.3792C31.5322 55.8302 30.936 55.1185 30.248 54.2707C28.5173 52.1383 26.2122 49.1537 23.9101 45.7416C21.6051 42.3253 19.3216 38.5075 17.6189 34.7069C15.9074 30.8866 14.8333 27.1937 14.8333 23.9972C14.8333 19.4444 16.6419 15.0779 19.8613 11.8586C23.0807 8.63919 27.4471 6.83057 32 6.83057C36.5529 6.83057 40.9193 8.63919 44.1386 11.8586C47.358 15.0779 49.1666 19.4444 49.1666 23.9972C49.1666 27.1937 48.0926 30.8866 46.3811 34.7069C44.6784 38.5075 42.3949 42.3253 40.0899 45.7416C37.7877 49.1537 35.4826 52.1383 33.752 54.2707C33.0639 55.1185 32.4678 55.8302 32 56.3792Z"
                   stroke="#D43650"
-                  stroke-width="3"
+                  strokeWidth="3"
                   shape-rendering="crispEdges"
                 />
               </g>
@@ -33,9 +33,9 @@ export const Contacts = () => {
                 width="43.0833"
                 height="59.0835"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
@@ -90,9 +90,9 @@ export const Contacts = () => {
               <path
                 d="M21.3334 7.99707C22.6667 7.99707 28 19.9971 28 21.3304C28 23.9971 24 26.6637 22.6667 29.3304C21.3334 31.9971 24 34.6637 26.6667 37.3304C27.7067 38.3704 32 42.6637 34.6667 41.3304C37.3334 39.9971 40 35.9971 42.6667 35.9971C44 35.9971 56 41.3304 56 42.6637C56 47.9971 52 51.9971 48 53.3304C44 54.6637 41.3334 54.6637 36 53.3304C30.6667 51.9971 26.6667 50.6637 20 43.9971C13.3334 37.3304 12 33.3304 10.6667 27.9971C9.33335 22.6637 9.33335 19.9971 10.6667 15.9971C12 11.9971 16 7.99707 21.3334 7.99707Z"
                 stroke="#D43650"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 shape-rendering="crispEdges"
               />
             </g>
@@ -104,9 +104,9 @@ export const Contacts = () => {
                 width="55.0833"
                 height="55.0835"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
@@ -162,9 +162,9 @@ export const Contacts = () => {
                 width="56.4167"
                 height="45.75"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
