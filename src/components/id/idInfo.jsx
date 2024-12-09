@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 export const IdInfo = (props) => {
-  const { nome, id, carga, pontos, objetivos } = props.filteredCourses;
+  const { nome, id, carga, pontos, objetivos, custo } = props.filteredCourses;
+
+  console.log(props.filteredCourses);
 
   const courseDetails = [
     { label: "Definição da UFCD", value: `${nome}.` },
@@ -10,7 +12,7 @@ export const IdInfo = (props) => {
     { label: "Pontos de Crédito", value: pontos }
   ];
 
-  const [areObjectivesVisible, setObjectivesVisible] = useState(false);
+  const [areObjectivesVisible, setObjectivesVisible] = useState(true);
 
   const toggleObjectivesVisibility = () => {
     setObjectivesVisible(!areObjectivesVisible);
@@ -20,6 +22,7 @@ export const IdInfo = (props) => {
     <section className="formacao-info-container">
       <h2>DETALHES DO CURSO</h2>
       <article>
+        <p className="course-cost">{custo}</p>
         {courseDetails.map((detail, index) => (
           <p key={index}>
             <span>{detail.label}:</span> {detail.value}
@@ -34,7 +37,7 @@ export const IdInfo = (props) => {
           </p>
 
           {/* TODO: Style this text to look like a link */}
-          <p onClick={toggleObjectivesVisibility}>
+          <p onClick={toggleObjectivesVisibility} className="objectives-toggle">
             {areObjectivesVisible ? "Esconder Objetivos" : "Mostrar Objetivos"}
           </p>
 
@@ -52,18 +55,16 @@ export const IdInfo = (props) => {
             <span>Conteúdos</span>
           </p>
 
-          <ul>
-            <li>
-              Detalhes relacionados aos conteúdos encontram-se disponíveis no
-              website do{" "}
-              <a
-                href="https://catalogo.anqep.gov.pt/ufcdPesquisa"
-                target="blank_"
-              >
-                Catálogo Nacional de Qualificações.
-              </a>
-            </li>
-          </ul>
+          <p>
+            Detalhes relacionados aos conteúdos encontram-se disponíveis no
+            website do{" "}
+            <a
+              href="https://catalogo.anqep.gov.pt/ufcdPesquisa"
+              target="blank_"
+            >
+              Catálogo Nacional de Qualificações.
+            </a>
+          </p>
         </div>
       </article>
     </section>

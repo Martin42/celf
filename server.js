@@ -28,7 +28,7 @@ app.post("/send-email", upload.array("files"), async (req, res) => {
   try {
     const sentFrom = new Sender(
       process.env.MAILERSEND_EMAIL,
-      req.body.Nome || "Unknown"
+      req.body.Nome || "CELF website user"
     );
 
     const recipients = [

@@ -44,8 +44,8 @@
 
 .svg-line-path {
   stroke: black;
-  strokeWidth: 3.6;
-  strokeLinecap: round;
+  stroke-width: 3.6;
+  stroke-linecap: round;
   transition: all 0.5s ease;
   &.top.open {
     transform: translate(4px, -1px) rotate(45deg);

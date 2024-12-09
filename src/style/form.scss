@@ -34,9 +34,11 @@
 
   @media (min-width: $breakpoint-md) {
     align-self: center;
-    gap: $spacing-xxl;
     margin-bottom: $spacing-desktop;
     width: 70vw;
+    form {
+      margin-top: $spacing-xl;
+    }
   }
 
   @media (min-width: $breakpoint-lg) {

@@ -78,6 +78,9 @@
 .Collapsible__contentInner {
   .faq-answer {
     margin-top: $spacing-sm;
+    @media (min-width: $breakpoint-md) {
+      margin-top: unset;
+    }
   }
 }
 
