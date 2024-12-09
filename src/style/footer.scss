@@ -14,6 +14,11 @@
     text-decoration: none;
     width: max-content;
   }
+
+  a:hover{
+    color: #c2c3c3;
+    transition: 0.1s;
+  }
 }
 
 .footer-logo-container {
