@@ -2,9 +2,6 @@ import React, { useState } from "react";
 
 export const IdInfo = (props) => {
   const { nome, id, carga, pontos, objetivos, custo } = props.filteredCourses;
-
-  console.log(props.filteredCourses);
-
   const courseDetails = [
     { label: "Definição da UFCD", value: `${nome}.` },
     { label: "Código da UFCD", value: id },

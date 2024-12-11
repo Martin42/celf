@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../style/form.scss";
+import { sendFormData } from "../../services/api";
 
 export const Form = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -17,20 +18,12 @@ export const Form = () => {
       data.append(key, userInfo[key]);
     }
 
-    try {
-      const response = await fetch("http://localhost:3001/send-email", {
-        method: "POST",
-        body: data
-      });
-
-      if (response.ok) {
-        alert("Email sent successfully!");
-      } else {
-        alert("Failed to send email.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the email.");
+    // Call backend
+    const response = await sendFormData(data);
+    if (response.success) {
+      alert("Email sent successfully!");
+    } else {
+      alert(response.error);
     }
   };
 

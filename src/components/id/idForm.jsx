@@ -1,49 +1,10 @@
 import React, { useState } from "react";
 import inputFields from "../../data/inputFields.json";
+import { calculateTotalFileSize } from "../../utils/calculateTotalFileSize";
+import { FormField } from "./formField";
+import { sendFormData } from "../../services/api";
 
 const MAX_TOTAL_FILE_SIZE = 20 * 1024 * 1024; // 20MB
-
-const FormField = ({
-  label,
-  type,
-  autoComplete,
-  placeholder,
-  select,
-  value,
-  onChange
-}) => {
-  const inputProps = {
-    type,
-    name: label,
-    autoComplete: autoComplete || "off",
-    placeholder,
-    required: true,
-    value,
-    onChange: (e) => onChange(e, label)
-  };
-
-  return (
-    <div className="course-input-field">
-      <label htmlFor={label}>{label}*</label>
-      {select ? (
-        <select
-          id={label}
-          name={label}
-          value={value}
-          onChange={(e) => onChange(e, label)}
-        >
-          {select.map((option, idx) => (
-            <option key={idx} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      ) : (
-        <input {...inputProps} />
-      )}
-    </div>
-  );
-};
 
 export const IdForm = (props) => {
   const { id, nome } = props.filteredCourses;
@@ -69,41 +30,36 @@ export const IdForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = new FormData();
+    if (files.length > 0) {
+      const { totalSize, totalSizeInMB } = calculateTotalFileSize(files);
 
-    // Append Wanted Course
-    data.append("curso pretendido", id + " " + nome);
-
-    // Append Form Data
-    for (let key in formData) {
-      data.append(key, formData[key]);
+      if (totalSize > MAX_TOTAL_FILE_SIZE) {
+        alert(
+          `O tamanho dos ficheiros anexados (${totalSizeInMB.toFixed(2)} MB) excede os 20MB.`
+        );
+        return;
+      }
     }
 
-    // Append Files
-    files.forEach((file) => {
-      data.append("files", file.file);
-    });
+    const data = new FormData();
+    data.append("curso pretendido", `${id} ${nome}`);
+    Object.keys(formData).forEach((key) => data.append(key, formData[key]));
+    files.forEach((file) => data.append("files", file.file));
 
-    try {
-      const response = await fetch("http://localhost:3001/send-email", {
-        method: "POST",
-        body: data
-      });
-
-      if (response.ok) {
-        alert("Email sent successfully!");
-      } else {
-        alert("Failed to send email.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the email.");
+    // Call backend
+    const response = await sendFormData(data);
+    if (response.success) {
+      alert("Email sent successfully!");
+    } else {
+      alert(response.error);
     }
   };
 
   const deleteFiles = (fileId) => {
     setFiles((prevFiles) => prevFiles.filter((file) => file.id !== fileId));
   };
+
+  const { totalSizeInMB } = calculateTotalFileSize(files);
 
   return (
     <section className="form-container">
@@ -236,9 +192,12 @@ export const IdForm = (props) => {
                 </div>
               )}
             </div>
-          </div>
 
-          <span className="mandatory-field-text">(*) Campos Obrigatórios</span>
+            <span className="total-size-indicator">
+              Tamanho dos Ficheiros: {totalSizeInMB} MB /{" "}
+              {(MAX_TOTAL_FILE_SIZE / (1024 * 1024)).toFixed(2)} MB
+            </span>
+          </div>
           <button type="submit" className="red-button">
             Submeter
           </button>
