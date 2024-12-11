@@ -30,9 +30,6 @@
     align-self: center;
     margin-bottom: $spacing-desktop;
     width: 70vw;
-    form {
-      margin-top: $spacing-xl;
-    }
   }
 
   @media (min-width: $breakpoint-lg) {
@@ -54,6 +51,7 @@
    
   form{
     @include container-style($spacing-md); 
+    margin-top: $spacing-xl;
   }
 
   h2 {

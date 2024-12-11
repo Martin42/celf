@@ -24,17 +24,13 @@ export const IdInfo = (props) => {
       <article>
         <p className="course-cost">{custo}</p>
         {courseDetails.map((detail, index) => (
-          <p key={index}>
-            <span>{detail.label}:</span> {detail.value}
-          </p>
+          <div key={index}>
+            <h4>{detail.label}</h4>
+            <p>{detail.value}</p>
+          </div>
         ))}
-      </article>
-
-      <article>
         <div>
-          <p>
-            <span>Objetivos da UFCD</span>
-          </p>
+          <h4>Objetivos da UFCD</h4>
 
           <p onClick={toggleObjectivesVisibility} className="objectives-toggle">
             {areObjectivesVisible ? "Esconder Objetivos" : "Mostrar Objetivos"}
@@ -50,10 +46,7 @@ export const IdInfo = (props) => {
         </div>
 
         <div>
-          <p>
-            <span>Conteúdos</span>
-          </p>
-
+          <h4>Conteúdos</h4>
           <p>
             Detalhes relacionados aos conteúdos encontram-se disponíveis no
             website do{" "}
