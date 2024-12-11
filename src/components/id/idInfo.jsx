@@ -36,7 +36,6 @@ export const IdInfo = (props) => {
             <span>Objetivos da UFCD</span>
           </p>
 
-          {/* TODO: Style this text to look like a link */}
           <p onClick={toggleObjectivesVisibility} className="objectives-toggle">
             {areObjectivesVisible ? "Esconder Objetivos" : "Mostrar Objetivos"}
           </p>
