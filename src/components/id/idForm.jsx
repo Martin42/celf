@@ -21,7 +21,7 @@ const FormField = ({
   };
 
   return (
-    <div>
+    <div className="course-input-field">
       <label htmlFor={label}>{label}*</label>
       {select ? (
         <select
@@ -114,19 +114,21 @@ export const IdForm = (props) => {
           <li>Cópia do cartão de cidadão;</li>
           <li>Certificado de habilitações;</li>
           <li>IBAN - caso tenha direito a subsídio de alimentação;</li>
-          <li>Declaração com horário da empresa</li>
+          <li>Declaração com horário da empresa.</li>
         </ul>
       </article>
-      <form onSubmit={handleSubmit}>
-        {inputFields.map((field) => (
-          <FormField
-            key={field.label}
-            {...field}
-            onChange={(e) => handleFormData(e, field.label)}
-          />
-        ))}
+      <form className="course-form" onSubmit={handleSubmit}>
+        <div className="input-container">
+          {inputFields.map((field) => (
+            <FormField
+              key={field.label}
+              {...field}
+              onChange={(e) => handleFormData(e, field.label)}
+            />
+          ))}
+        </div>
 
-        <div className="course-input">
+        <div className="wanted-course-container">
           <label htmlFor="curso">Curso Pretendido*</label>
           <input type="text" readOnly name="curso" value={id + " - " + nome} />
         </div>
@@ -135,6 +137,7 @@ export const IdForm = (props) => {
           <label htmlFor="anexos">Anexos</label>
           <div className="file-upload-input">
             <input
+              className="hidden-input"
               type="file"
               name="anexos"
               id="anexos"
@@ -144,9 +147,13 @@ export const IdForm = (props) => {
             />
 
             {files && files.length > 0 ? (
-              files.map((file) => <p key={file.id}>{file.file.name}</p>)
+              <div className="attached-files-content">
+                {files.map((file) => (
+                  <p key={file.id}>{file.file.name}</p>
+                ))}
+              </div>
             ) : (
-              <>
+              <div className="attached-files-placeholder">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -163,11 +170,12 @@ export const IdForm = (props) => {
                 </svg>
 
                 <span>Clique para adicionar anexos</span>
-              </>
+              </div>
             )}
           </div>
         </div>
 
+        <span className="mandatory-field-text">(*) Campos Obrigatórios</span>
         <button type="submit" className="red-button">
           Submeter
         </button>

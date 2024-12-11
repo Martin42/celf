@@ -75,6 +75,9 @@
   width: 100%;
   margin: 0 1rem;
   padding: 1rem;
+  &:hover{
+    cursor: pointer;
+  }
   @media (min-width: $breakpoint-md) {
     margin: unset;
   }
@@ -95,7 +98,7 @@
   gap: $spacing-xl;
   @media (min-width: $breakpoint-md) {
     flex-direction: row;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -110,7 +113,7 @@
   @media (min-width: $breakpoint-md) {
     align-self: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &:first-child {

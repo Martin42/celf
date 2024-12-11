@@ -1,14 +1,10 @@
 @use "variables" as *;
 
 // Form
-@mixin container-style {
+@mixin container-style($gap) {
   display: flex;
   flex-direction: column;
-  gap: $spacing-xs;
-  label {
-    font-size: $font-size-xs;
-    font-weight: $font-weight-light;
-  }
+  gap: $gap;
 }
 
 @mixin input-style {
@@ -21,9 +17,7 @@
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-xl;
+  @include container-style($spacing-xl);
   margin: $margin-mobile;
   margin-bottom: $spacing-xxl;
 
@@ -48,22 +42,18 @@
 
   article {
     font-size: $font-size-base;
-    font-style: normal;
     font-weight: $font-weight-light;
+    p {
+      text-indent: 20px;
+    }
   }
 
   button {
     align-self: end;
   }
-
-  div {
-    @include container-style;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-md;
+   
+  form{
+    @include container-style($spacing-md); 
   }
 
   h2 {
@@ -80,10 +70,6 @@
     min-height: 2rem;
   }
 
-  p {
-    text-indent: 20px;
-  }
-
   span {
     font-weight: $font-weight-normal;
   }
@@ -92,44 +78,82 @@
     min-height: 6rem;
     resize: vertical;
   }
+
+  label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-light;
+  }
 }
 
-.course-input {
+
+.input-container{
+  @include container-style($spacing-md);
+  @media(min-width: $breakpoint-md){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .course-input-field{
+    @include container-style($spacing-xs);
+  }
+}
+
+.wanted-course-container {
   input {
     @include input-style();
     background: #d8d8d8;
   }
 }
 
-.mandatory-field {
+.file-upload-container, .wanted-course-container{
+  @include container-style($spacing-xs);
+}
+
+
+.file-upload-input {
+  min-height: 6rem;
+  position: relative;
+  cursor: pointer;
+  @include input-style();
+  span {
+    font-size: $font-size-sm;
+    color: $color-terciary;
+  }
+
+  &:has(.attached-files-placeholder){
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mandatory-field-text {
   font-size: $font-size-xs;
   font-weight: $font-weight-bold;
 }
 
-//
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
 
-.file-upload-container {
-  .file-upload-input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;
-    position: relative;
-    padding: 0;
-    cursor: pointer;
-    @include input-style();
+.attached-files-placeholder{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: max-content;
+}
 
-    span {
-      font-size: $font-size-sm;
-      color: $color-terciary;
-    }
-  }
+.attached-files-content{
+  @include container-style($spacing-sm)
+}
 
-  input {
-    position: absolute;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
+// ABOUT FORM
+
+.about-form{
+  div{
+    @include container-style($spacing-xs)
   }
 }

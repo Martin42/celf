@@ -37,7 +37,7 @@ export const Form = () => {
   return (
     <section className="form-container">
       <h2>TEM ALGUMA DÚVIDA</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="about-form">
         <div>
           <label htmlFor="email">Email*</label>
           <input
@@ -62,7 +62,7 @@ export const Form = () => {
           ></textarea>
         </div>
 
-        <span className="mandatory-field">(*) Campos Obrigatórios</span>
+        <span className="mandatory-field-text">(*) Campos Obrigatórios</span>
         <button type="submit" className="red-button">
           Submeter
         </button>
