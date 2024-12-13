@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/homeStyles/services.scss";
+import { Link } from "react-router-dom";
 
 export const Services = () => {
   return (
@@ -74,8 +75,8 @@ export const Services = () => {
             <p className="card-title">Formação</p>
             <p className="card-subtitle">Oferecemos formação especializada</p>
           </div>
-          <button type="button" className="card-button">
-            Saiba Mais{" "}
+          <Link to={"/formacao/nao-financiada"} className="card-button">
+            Saiba Mais
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
@@ -88,7 +89,7 @@ export const Services = () => {
                 fill="#D43650"
               />
             </svg>
-          </button>
+          </Link>
         </div>
 
         {/* ALUGER */}
@@ -158,8 +159,8 @@ export const Services = () => {
               Disponibilizamos salas totalmente equipadas
             </p>
           </div>
-          <button type="button" className="card-button">
-            Saiba Mais{" "}
+          <Link to={"/"} className="card-button">
+            Saiba Mais
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
@@ -172,7 +173,7 @@ export const Services = () => {
                 fill="#D43650"
               />
             </svg>
-          </button>
+          </Link>
         </div>
 
         {/* TRADUCOES */}
@@ -243,8 +244,8 @@ export const Services = () => {
             <p className="card-title">Traduções</p>
             <p className="card-subtitle">Somos especialistas em traduções</p>
           </div>
-          <button type="button" className="card-button">
-            Saiba Mais{" "}
+          <Link to={"/"} className="card-button">
+            Saiba Mais
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
@@ -257,7 +258,7 @@ export const Services = () => {
                 fill="#D43650"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

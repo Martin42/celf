@@ -105,7 +105,7 @@ export const Navbar = () => {
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <div
-                  className={`${location === "/formacao/financiada" || location === "formacao/nao-financiada" ? "active" : ""} dropdown-trigger`}
+                  className={`${location === "/formacao/financiada" || location === "/formacao/nao-financiada" ? "active" : ""} dropdown-trigger`}
                 >
                   Formação
                   <svg

@@ -19,7 +19,7 @@ export const IdInfo = (props) => {
     <section className="formacao-info-container">
       <h2>DETALHES DO CURSO</h2>
       <article>
-        <p className="course-cost">{custo}</p>
+        <h3 className="course-cost">{custo}</h3>
         {courseDetails.map((detail, index) => (
           <div key={index}>
             <h4>{detail.label}</h4>

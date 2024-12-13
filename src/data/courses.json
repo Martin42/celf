@@ -164,7 +164,7 @@
     "area": "Cursos Extra-Catálogo",
     "carga": "25 Horas",
     "pontos": "2.25",
-    "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
+    "objetivos": ["Aprender a utilizar ferramentas de redação de texto"],
     "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807129/ECOS-mobile-bg_zxydgy.webp",
     "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECOS-desktop-bg_sewkqd.webp"
   },
@@ -175,7 +175,11 @@
     "area": "Cursos Extra-Catálogo",
     "carga": "25 Horas",
     "pontos": "2.25",
-    "objetivos": ["Lorem Ipsum.", "Lorem Ipsum."],
+    "objetivos": [
+      "Identificar os novos meios de comunicação digital.",
+      "Aprender a realizar reuniões online de trabalho.",
+      "Reconhecer as especificidades das principais plataformas de videochamadas"
+    ],
     "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECRO-mobile-bg_f8vhea.webp",
     "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732807128/ECRO-desktop-bg_hej8dj.webp"
   },
@@ -205,7 +209,8 @@
       "Explicar a importância de adequar a sua ação profissional a diferentes públicos e culturas.",
       "Explicar a importância de adequar a sua ação profissional a diferentes contextos institucionais no âmbito dos cuidados de saúde."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/6558-mobile-bg_vzdd0i.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/6558-desktop-bg_rdimtv.webp"
   },
 
   {
@@ -250,7 +255,8 @@
       "Explicar que as tarefas que se integram no âmbito da sua intervenção terão de ser sempre executadas com orientação e supervisão de um profissional de saúde.",
       "Identificar as tarefas que têm de ser executadas sob supervisão direta do profissional de saúde e aquelas que podem ser executadas sozinho."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023669/6570-mobile-bg_rest6k.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023669/6570-desktop-bg_iqhpk6.webp"
   },
 
   {
@@ -266,7 +272,8 @@
       "Descrever os processos de comunicação e observação.",
       "Prestar cuidados que proporcionem conforto à pessoa idosa."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/3538-mobile-bg_byixbt.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/3538-desktop-bg_as2gee.webp"
   },
 
   {
@@ -282,7 +289,8 @@
       "Identificar alguns fatores que contribuem para o isolamento e imobilidade da pessoa idosa.",
       "Atuar em situações de emergência."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/3546-mobile-bg_puzsqo.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023669/3546-desktop-bg_cuwun5.webp"
   },
 
   {
@@ -297,7 +305,8 @@
       "Reconhecer o serviço nacional de proteção civil.",
       "Reconhecer a importância da prevenção de acidentes e de doenças profissionais."
     ],
-    "url": ""
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023669/3564-mobile-bg_g6p67f.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/3564-desktop-bg_rfhrkk.webp"
   },
 
   {
@@ -311,6 +320,8 @@
       "Aplicar técnicas de prestação de cuidados de alimentação.",
       "Efetuar a eliminação de resíduos alimentares.",
       "Aplicar as técnicas de comunicação, de acordo com o tipo de interlocutor."
-    ]
+    ],
+    "mobile": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/8854-mobile-bg_mfmlzb.webp",
+    "desktop": "https://res.cloudinary.com/ds2krfoyx/image/upload/v1734023668/8854-desktop-bg_t5leya.webp"
   }
 ]

@@ -26,9 +26,13 @@ export const FormField = ({
         <select
           id={label}
           name={label}
-          value={value}
           onChange={(e) => onChange(e, label)}
+          defaultValue={""}
+          required
         >
+          <option value="" disabled>
+            Selecione uma opção
+          </option>
           {select.map((option, idx) => (
             <option key={idx} value={option}>
               {option}

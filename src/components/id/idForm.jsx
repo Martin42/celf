@@ -10,13 +10,13 @@ export const IdForm = (props) => {
   const { id, nome } = props.filteredCourses;
 
   const [formData, setFormData] = useState(
-    inputFields.reduce((acc, field) => ({ ...acc, [field.label]: "" }), {})
+    inputFields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
   );
 
   const [files, setFiles] = useState([]);
 
-  const handleFormData = (e, label) => {
-    setFormData((prevData) => ({ ...prevData, [label]: e.target.value }));
+  const handleFormData = (e, name) => {
+    setFormData((prevData) => ({ ...prevData, [name]: e.target.value }));
   };
 
   const addFiles = (event) => {
@@ -42,7 +42,7 @@ export const IdForm = (props) => {
     }
 
     const data = new FormData();
-    data.append("curso pretendido", `${id} ${nome}`);
+    data.append("Curso Pretendido", `${id} ${nome}`);
     Object.keys(formData).forEach((key) => data.append(key, formData[key]));
     files.forEach((file) => data.append("files", file.file));
 
@@ -83,7 +83,7 @@ export const IdForm = (props) => {
               <FormField
                 key={field.label}
                 {...field}
-                onChange={(e) => handleFormData(e, field.label)}
+                onChange={(e) => handleFormData(e, field.name)}
               />
             ))}
           </div>
