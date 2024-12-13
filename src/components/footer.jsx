@@ -5,6 +5,7 @@ import "../style/footer.scss";
 import govImg from "../assets/gov-pt-logo.png";
 import ueImg from "../assets/ue-logo.png";
 import prrImg from "../assets/prr-logo.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -30,7 +31,7 @@ export const Footer = () => {
       <div className="main-footer-container">
         <div className="useful-links-container">
           <h2>Links Úteis</h2>
-          <a href="/">Proteção de Dados</a>
+          <Link to={"/privacy-policy"}>Proteção de Dados</Link>
           <a
             href="https://www.livroreclamacoes.pt/inicio/"
             target="_blank"

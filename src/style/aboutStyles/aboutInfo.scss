@@ -2,7 +2,6 @@
 
 .about-container {
   margin: $margin-mobile;
-
   @media (min-width: $breakpoint-xs) {
     margin: $margin-tablet;
   }
@@ -20,10 +19,10 @@
     color: black;
     font-size: $font-size-3xl;
     font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
     @media (min-width: $breakpoint-md) {
       font-size: $font-size-4xl;
     }
-    margin-bottom: $spacing-md;
     @media (min-width: $breakpoint-sm) {
       margin-bottom: $spacing-lg;
     }
@@ -37,6 +36,7 @@
     @media (min-width: $breakpoint-sm) {
       line-height: normal;
     }
+
     &:not(:last-child) {
       margin-bottom: $spacing-xs;
     }

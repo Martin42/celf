@@ -3,6 +3,8 @@ import inputFields from "../../data/inputFields.json";
 import { calculateTotalFileSize } from "../../utils/calculateTotalFileSize";
 import { FormField } from "./formField";
 import { sendFormData } from "../../services/api";
+import { Link } from "react-router-dom";
+import "../../style/privacyStyles/privacy.scss";
 
 const MAX_TOTAL_FILE_SIZE = 20 * 1024 * 1024; // 20MB
 
@@ -14,6 +16,12 @@ export const IdForm = (props) => {
   );
 
   const [files, setFiles] = useState([]);
+
+  const [approved, setApproved] = useState(false);
+
+  const handleApproved = (e) => {
+    setApproved(e.target.checked);
+  };
 
   const handleFormData = (e, name) => {
     setFormData((prevData) => ({ ...prevData, [name]: e.target.value }));
@@ -46,12 +54,20 @@ export const IdForm = (props) => {
     Object.keys(formData).forEach((key) => data.append(key, formData[key]));
     files.forEach((file) => data.append("files", file.file));
 
-    // Call backend
-    const response = await sendFormData(data);
-    if (response.success) {
-      alert("Email sent successfully!");
-    } else {
-      alert(response.error);
+    if (!approved) {
+      alert("Por favor aceite os termos de proteção de dados");
+      return;
+    }
+
+    try {
+      // Call backend
+      const response = await sendFormData(data);
+      alert(
+        response.success ? "Formulário enviado com sucesso" : response.error
+      );
+    } catch (error) {
+      console.error("Erro ao enviar o formulário:", error);
+      alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
     }
   };
 
@@ -87,7 +103,6 @@ export const IdForm = (props) => {
               />
             ))}
           </div>
-
           <div className="wanted-course-container">
             <label htmlFor="curso">Curso Pretendido*</label>
             <input
@@ -97,7 +112,6 @@ export const IdForm = (props) => {
               value={id + " - " + nome}
             />
           </div>
-
           <div className="file-upload-container">
             <label htmlFor="anexos">Anexos</label>
             <div className="file-upload-input">
@@ -198,6 +212,24 @@ export const IdForm = (props) => {
               {(MAX_TOTAL_FILE_SIZE / (1024 * 1024)).toFixed(2)} MB
             </span>
           </div>
+
+          <div className="privacy-container">
+            <input
+              type="checkbox"
+              id="privacy"
+              name="privacy"
+              value="Sim"
+              checked={approved}
+              onChange={handleApproved}
+            />
+            <label htmlFor="privacy">
+              Autorizo a utilização dos meus dados pessoais de acordo com o{" "}
+              <Link to={"/privacy-policy"}>
+                Regulamento Geral de Proteção de Dados.
+              </Link>
+            </label>
+          </div>
+
           <button type="submit" className="red-button">
             Submeter
           </button>

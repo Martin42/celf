@@ -48,9 +48,9 @@
   button {
     align-self: end;
   }
-   
-  form{
-    @include container-style($spacing-md); 
+
+  form {
+    @include container-style($spacing-md);
     margin-top: $spacing-xl;
   }
 
@@ -83,14 +83,13 @@
   }
 }
 
-
-.input-container{
+.input-container {
   @include container-style($spacing-md);
-  @media(min-width: $breakpoint-md){
+  @media (min-width: $breakpoint-md) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .course-input-field{
+  .course-input-field {
     @include container-style($spacing-xs);
   }
 }
@@ -102,10 +101,10 @@
   }
 }
 
-.file-upload-container, .wanted-course-container{
+.file-upload-container,
+.wanted-course-container {
   @include container-style($spacing-xs);
 }
-
 
 .file-upload-input {
   min-height: 6rem;
@@ -117,7 +116,7 @@
     color: $color-terciary;
   }
 
-  &:has(.attached-files-placeholder){
+  &:has(.attached-files-placeholder) {
     display: flex;
     justify-content: center;
   }
@@ -138,7 +137,7 @@
   height: 100%;
 }
 
-.attached-files-placeholder{
+.attached-files-placeholder {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -147,48 +146,46 @@
   width: 100%;
 }
 
-.attached-files-container{
+.attached-files-container {
   @include container-style(0.75rem);
-  padding: .5rem;
-  button{
+  padding: 0.5rem;
+  button {
     background: none;
     padding: 0;
     border: none;
     cursor: pointer;
-    &:hover{
+    &:hover {
       opacity: 0.7;
       transition: 0.2s;
     }
   }
 }
 
-.attached-files-content{
+.attached-files-content {
   display: flex;
   gap: $spacing-sm;
 }
 
-.add-more-files-container{
+.add-more-files-container {
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: .2rem .5rem;
+  padding: 0.2rem 0.5rem;
 }
 
-.add-more-files-button{
+.add-more-files-button {
   position: relative;
   background: none;
   border: none;
   padding: unset;
 }
 
-.total-size-indicator{
+.total-size-indicator {
   font-size: $font-size-xs;
 }
 
 // ABOUT FORM
 
-.about-form{
-  div{
-    @include container-style($spacing-xs)
-  }
+.about-form div {
+  @include container-style($spacing-xs);
 }

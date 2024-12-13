@@ -12,6 +12,7 @@ import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 import Formacao from "./components/formacao/formacao";
 import ScrollToTop from "./utils/scrollToTop";
+import { Privacy } from "./components/privacy";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -28,10 +29,12 @@ root.render(
         <Route path="/formacao/nao-financiada" element={<Formacao />} />
         <Route path="/formacao/nao-financiada/:id" element={<Id />} />
         <Route path="/sobre-nos" element={<About />} />
-      </Routes>
-    </Router>
 
-    <Footer />
+        <Route path="/privacy-policy" element={<Privacy />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 
