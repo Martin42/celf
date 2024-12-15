@@ -225,8 +225,9 @@ export const IdForm = (props) => {
             <label htmlFor="privacy">
               Autorizo a utilização dos meus dados pessoais de acordo com o{" "}
               <Link to={"/privacy-policy"}>
-                Regulamento Geral de Proteção de Dados.
+                Regulamento Geral de Proteção de Dados
               </Link>
+              .
             </label>
           </div>
 

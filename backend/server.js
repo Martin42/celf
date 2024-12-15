@@ -7,13 +7,14 @@ const {
   Recipient,
   Attachment
 } = require("mailersend");
+
 const cors = require("cors");
 
 const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 const upload = multer({ storage: multer.memoryStorage() });
 
 // Use CORS to allow requests from different origins
