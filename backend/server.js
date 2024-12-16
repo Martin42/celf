@@ -87,7 +87,7 @@ function formatHtml(data) {
 
 app.post(
   "/send-email",
-  // sendEmailRateLimiter,
+  sendEmailRateLimiter,
   upload.array("files"),
   async (req, res) => {
     console.log(req.body);
