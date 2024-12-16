@@ -27,7 +27,7 @@ export const Navbar = () => {
     <>
       {isTablet ? (
         // Tablet and under
-        <nav className={`header-container ${isNavOpen ? "open" : ""}`}>
+        <div className={`header-container ${isNavOpen ? "open" : ""}`}>
           <div className={`logo-container ${isNavOpen ? "open" : ""}`}>
             <Link to={"/"}>
               <img
@@ -85,7 +85,7 @@ export const Navbar = () => {
               Sobre Nós
             </Link>
           </nav>
-        </nav>
+        </div>
       ) : (
         <nav className="header-container">
           <div className="logo-container">
