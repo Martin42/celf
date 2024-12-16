@@ -1,9 +1,12 @@
 export const sendFormData = async (formData) => {
   try {
-    const response = await fetch("http://localhost:3001/send-email", {
-      method: "POST",
-      body: formData
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/send-email`,
+      {
+        method: "POST",
+        body: formData
+      }
+    );
 
     if (response.ok) {
       return { success: true };
