@@ -95,7 +95,7 @@ app.post(
     try {
       const sentFrom = new Sender(
         process.env.MAILERSEND_EMAIL,
-        req.body.Nome || "CELF website user"
+        req.body.Nome || "CELF User"
       );
 
       const recipients = [
