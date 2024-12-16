@@ -62,9 +62,18 @@ export const IdForm = (props) => {
     try {
       // Call backend
       const response = await sendFormData(data);
-      alert(
-        response.success ? "Formulário enviado com sucesso" : response.error
-      );
+      if (response.success) {
+        alert("Formulário enviado com sucesso");
+
+        // Reset form data
+        setFormData(
+          inputFields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
+        );
+        setFiles([]);
+        setApproved(false);
+      } else {
+        alert(response.error);
+      }
     } catch (error) {
       console.error("Erro ao enviar o formulário:", error);
       alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
