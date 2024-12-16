@@ -4,11 +4,11 @@ import "../../style/_buttons.scss";
 import { Link } from "react-router-dom";
 
 const mobileHomeUrl =
-  "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/wtugdfsshkxpftthzexc.webp";
+  "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364452/home-mobile-bg_an99am.webp";
 const desktopHomeUrl =
-  "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/t4qfnfne7qnwhpvqrpei.webp";
+  "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364451/home-desktop-bg_zjnva1.webp";
 const tabletHomeUrl =
-  "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553491/ge7dsgnbgnb4tv13afpf.webp";
+  "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364452/home-tablet-bg_quqvyz.webp";
 
 export const Hero = () => {
   return (

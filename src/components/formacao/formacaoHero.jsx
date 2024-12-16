@@ -9,20 +9,20 @@ import iefpLogo from "../../assets/iefp-logo.png";
 // Background URLs
 const financiadaUrls = {
   mobile:
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554084/financiada-mobile-bg_zhuvoa.webp",
+    "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364457/financiada-mobile-bg_irfwum.webp",
   tablet:
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554085/financiada-tablet-bg_xknous.webp",
+    "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364457/financiada-tablet-bg_qqfsyq.webp",
   desktop:
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732554085/financiada-desktop-bg_c5kh8l.webp"
+    "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364456/financiada-desktop-bg_zsiyjm.webp"
 };
 
 const naoFinanciadaUrls = {
   mobile:
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-mobile-bg_idrxin.webp",
+    "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364451/formacao-nao-financiada-mobile-bg_ppuv03.webp",
   tablet:
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-desktop-bg_d9txho.webp",
+    "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364451/formacao-nao-financiada-desktop-bg_jnkvdb.webp",
   desktop:
-    "https://res.cloudinary.com/ds2krfoyx/image/upload/v1733242875/formacao-nao-financiada-desktop-bg_d9txho.webp"
+    "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364451/formacao-nao-financiada-desktop-bg_jnkvdb.webp"
 };
 
 const HeroImage = ({ urls, alt }) => (

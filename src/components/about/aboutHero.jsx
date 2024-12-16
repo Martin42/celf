@@ -1,11 +1,11 @@
 import React from "react";
 
 const mobileAboutUrl =
-  "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553953/about-mobile-bg_u3jfja.webp";
+  "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364454/about-mobile-bg_dtceyd.webp";
 const tabletAboutUrl =
-  "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553953/about-tablet-bg_d3ceie.webp";
+  "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364454/about-tablet-bg_pvzung.webp";
 const desktopAboutUrl =
-  "https://res.cloudinary.com/ds2krfoyx/image/upload/v1732553954/about-desktop-bg_upkdsl.webp";
+  "https://res.cloudinary.com/deo7b0ceq/image/upload/v1734364454/about-desktop-bg_z7fnqd.webp";
 
 export const AboutHero = () => {
   return (
