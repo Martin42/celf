@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+.map-container {
+  overflow: hidden;
+  iframe {
+    border: none;
+    box-shadow: $box-shadow;
+  }
+}

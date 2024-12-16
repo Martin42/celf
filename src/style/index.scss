@@ -1,14 +1,50 @@
 @use "variables" as *;
 
+/* Global Reset */
 * {
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
   margin: 0;
   font-family: $font-family, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+p,
+h1,
+h2,
+ul {
+  margin: 0;
+}
+
+p,
+ul {
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-weight: $font-weight-bold;
+}
+
+h1 {
+  color: white;
+  font-size: $font-size-3xl;
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  color: $color-terciary;
+  font-size: $font-size-xl;
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-2xl;
+  }
 }
 
 code {

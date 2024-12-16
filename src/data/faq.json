@@ -1,25 +1,31 @@
 [
   {
     "id": 0,
-    "question": "Qual é a duração dos cursos financiados?",
-    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+    "question": "Qual é a duração das formações financiados?",
+    "answer": "As formações proporcionados pelo CELF têm a duração de 25h a 50h. Pode obter mais informação sobre cada curso na página 'Formação'"
   },
 
   {
     "id": 1,
     "question": "Que tipo de apoio têm estas formações?",
-    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+    "answer": "As formações financiadas atuais oferecem um subsídio de alimentação com o valor de 6,00€ por sessão de mínimo de 3h"
   },
 
   {
     "id": 2,
     "question": "Quem se pode candidatar?",
-    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+    "answer": "O projeto atual possibilita que todos os indivíduos empregados possam usufruir das nossas formações"
   },
 
   {
     "id": 3,
     "question": "Como me posso inscrever?",
-    "answer": "Lorem ipsum dolor sit amet consectetur. Amet varius at placerat nisi mattis pellentesque. Nec commodo arcu mi mattis. Leo in nulla velit adipiscing quisque sit. Mauris turpis nunc velit mauris."
+    "answer": "O nosso site oferece a possibilidade de efetuar uma inscrição simples e rápida quer seja através de um formulário de inscrição, email ou chamada telefónica."
+  },
+
+  {
+    "id": 4,
+    "question": "Há alguma modalidade adequada a empresas?",
+    "answer": "Oferecemos soluções integradas para apoiar empresas na qualificação contínua dos seus colaboradores, desde planeamento anual da formação, reconhecimento e valorização de competências e formação especializada para habilitar os colaboradores a identificar e prevenir riscos associados à sua atividade"
   }
 ]

@@ -1,21 +1,23 @@
 @use "variables" as *;
 
 .footer-layout-container {
-  margin-top: $spacing-xxl;
   background-color: $color-footer;
   h2 {
     font-size: $font-size-base;
     color: #989d9e;
-    text-decoration: underline;
   }
 
   p,
   a {
-    margin: $spacing-sm 0;
     font-size: $font-size-xs;
     color: #989d9e;
     text-decoration: none;
     width: max-content;
+  }
+
+  a:hover{
+    color: #c2c3c3;
+    transition: 0.1s;
   }
 }
 
@@ -24,6 +26,10 @@
   justify-content: center;
   align-items: center;
   gap: $spacing-md;
+
+  @media (min-width: $breakpoint-xs) {
+    gap: $spacing-xl;
+  }
   padding: $spacing-md;
   background-color: white;
 }
@@ -31,39 +37,77 @@
 .footer-logo-properties {
   height: 1.5rem;
   width: auto;
+  @media (min-width: $breakpoint-xs) {
+    height: 2rem;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    height: 2.5rem;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    height: 3rem;
+  }
 }
 
 .main-footer-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  @media (min-width: $breakpoint-xs){
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+}
+
+.useful-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  p {
+    margin: 0;
+  }
+}
+
+.social-container {
+  display: flex;
+  padding: 1rem 0;
+  gap: $spacing-sm;
+}
+
+.main-footer-container,
+.copyright-container {
   margin: $margin-mobile;
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-sm;
-  padding: 1rem;
-}
 
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: $spacing-sm;
-}
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+  }
 
-.footer-links-container {
-  display: flex;
-  flex-direction: column;
+  @media (min-width: $breakpoint-md) {
+    margin: $margin-laptop;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin: $margin-desktop;
+  }
 }
 
 // Copyright
 
 .copyright-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: $spacing-xs;
   border-top: 1px solid #4d4e4f;
-  margin: $margin-mobile;
-  text-align: center;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+  a {
+    text-decoration: underline;
+  }
 }
 
-// Media Queries
+// Extra Media Queries
 
 @media (max-width: 375px) {
   .footer-logo-properties {
@@ -72,11 +116,9 @@
   }
 }
 
-@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-  .footer-logo-properties {
-    height: 2rem;
-  }
-  .footer-logo-container {
-    gap: $spacing-xl;
+@media (min-width: $breakpoint-md) {
+  .footer-about-container {
+    max-width: 16rem;
+    word-break: break-all;
   }
 }

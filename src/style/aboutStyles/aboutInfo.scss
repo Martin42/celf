@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+.about-container {
+  margin: $margin-mobile;
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 70vw;
+    align-self: center;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 50vw;
+  }
+
+  h1 {
+    color: black;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
+    @media (min-width: $breakpoint-sm) {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  p {
+    text-indent: 20px;
+    line-height: 132.075%;
+    font-weight: $font-weight-light;
+
+    @media (min-width: $breakpoint-sm) {
+      line-height: normal;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-xs;
+    }
+  }
+
+  span {
+    font-weight: $font-weight-normal;
+    @media (min-width: $breakpoint-sm) {
+      font-weight: $font-weight-bold;
+    }
+  }
+}

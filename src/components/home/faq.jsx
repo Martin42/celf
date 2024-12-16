@@ -45,7 +45,7 @@ const triggerIsOpen = (question) => {
           viewBox="0 0 16 16"
           fill="none"
         >
-          <g clip-path="url(#clip0_672_206)">
+          <g clipPath="url(#clip0_672_206)">
             <path
               d="M13.4388 6.26864H9.82908V2.65888C9.82908 2.1802 9.63892 1.72112 9.30044 1.38264C8.96196 1.04416 8.50288 0.854004 8.0242 0.854004C7.54552 0.854004 7.08644 1.04416 6.74796 1.38264C6.40948 1.72112 6.21932 2.1802 6.21932 2.65888L6.28339 6.26864H2.60957C2.13088 6.26864 1.6718 6.45879 1.33332 6.79727C0.994844 7.13576 0.804688 7.59483 0.804688 8.07352C0.804688 8.5522 0.994844 9.01128 1.33332 9.34976C1.6718 9.68824 2.13088 9.87839 2.60957 9.87839L6.28339 9.81432L6.21932 13.4881C6.21932 13.9668 6.40948 14.4259 6.74796 14.7644C7.08644 15.1029 7.54552 15.293 8.0242 15.293C8.50288 15.293 8.96196 15.1029 9.30044 14.7644C9.63892 14.4259 9.82908 13.9668 9.82908 13.4881V9.81432L13.4388 9.87839C13.9175 9.87839 14.3766 9.68824 14.7151 9.34976C15.0536 9.01128 15.2437 8.5522 15.2437 8.07352C15.2437 7.59483 15.0536 7.13576 14.7151 6.79727C14.3766 6.45879 13.9175 6.26864 13.4388 6.26864Z"
               fill="#D43650"
@@ -66,56 +66,24 @@ export const FAQ = () => {
   const questionsData = data;
 
   return (
-    <div className="faq-container">
-      <h1>PERGUNTAS FREQUENTES</h1>
+    <section className="faq-container">
+      <h2>PERGUNTAS FREQUENTES</h2>
       <div className="collapsible-container">
         {/* Collapsibles here */}
-        {questionsData.map((element) => (
+        {questionsData.map((element, index) => (
           <Collapsible
-            trigger={triggerIsOpen(element.question)}
-            triggerWhenOpen={trigger(element.question)}
-            transitionTime={500}
             className="collapsible-closed"
+            key={index}
             openedClassName="collapsible-open"
             overflowWhenOpen="auto"
-            id={element.id}
+            transitionTime={500}
+            trigger={triggerIsOpen(element.question)}
+            triggerWhenOpen={trigger(element.question)}
           >
-            <p>{element.answer}</p>
+            <p className="faq-answer">{element.answer}</p>
           </Collapsible>
         ))}
       </div>
-
-      <div className="form-container">
-        <h2>Tem alguma questão?</h2>
-        <form action="submit">
-          <div className="email-container">
-            <label htmlFor="email">Email*</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="example@gmail.com"
-              autoComplete="email"
-              required
-            />
-          </div>
-
-          <div className="questions-container">
-            <label htmlFor="question">Questão*</label>
-            <textarea
-              name="question"
-              id="question"
-              placeholder="Escreva aqui a sua questão"
-              required
-            ></textarea>
-          </div>
-
-          <span className="mandatory-field">(*) Campos Obrigatórios</span>
-          <button type="submit" className="red-button">
-            Enviar
-          </button>
-        </form>
-      </div>
-    </div>
+    </section>
   );
 };

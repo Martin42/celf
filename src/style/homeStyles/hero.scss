@@ -1,82 +1,70 @@
 @use "../variables" as *;
 
-// Mixins
-
-@mixin reset-margin {
-  margin: 0;
-}
-
-// Base Styles
-
-h1 {
-  font-size: $font-size-3xl;
-
-  @media (min-width: $breakpoint-md) {
-    font-size: $font-size-4xl;
-  }
-  font-weight: $font-weight-bold;
-  @include reset-margin;
-}
-
-p {
-  @include reset-margin;
-}
-
-// Hero
-$hero-background-mobile-url: "../../assets/hero-mobile-bg.png";
-$hero-background-tablet-url: "../../assets/hero-tablet-bg.png";
-$hero-background-desktop-url: "../../assets/hero-desktop-bg.png";
-$hero-background-overlay: rgba(33, 33, 33, 0.45);
-
 .hero-container {
   position: relative;
   height: 25rem;
+  @media (min-width: $breakpoint-md) {
+    height: 28rem;
+  }
   display: flex;
   align-items: center;
   overflow: hidden;
+  justify-content: center;
+}
 
-  @media (min-width: $breakpoint-xs) {
-    justify-content: center;
+.hero-img-wrapper,
+.clearer-hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  img {
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    z-index: 0;
   }
 }
 
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    linear-gradient($hero-background-overlay, $hero-background-overlay),
-    url($hero-background-mobile-url) no-repeat center center;
-
-  @media (min-width: $breakpoint-xs) {
-    background:
-      linear-gradient($hero-background-overlay, $hero-background-overlay),
-      url($hero-background-tablet-url) no-repeat center center;
-    background-size: cover;
+.clearer-hero-img-wrapper {
+  &::before {
+    background: linear-gradient(
+      $dimmer-background-overlay,
+      $dimmer-background-overlay
+    );
   }
+}
 
-  @media (min-width: $breakpoint-lg) {
-    background:
-      linear-gradient($hero-background-overlay, $hero-background-overlay),
-      url($hero-background-desktop-url) no-repeat center center;
-    background-size: cover;
+.hero-img-wrapper {
+  &::before {
+    background: linear-gradient($background-overlay, $background-overlay);
   }
-  background-size: cover;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  z-index: 0;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+  position: absolute;
   margin: $margin-mobile;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
+  justify-content: center;
+  height: 100%;
+  z-index: 1;
   @media (min-width: $breakpoint-xs) {
     align-items: center;
   }
@@ -84,7 +72,6 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
   gap: $spacing-md;
   p {
     font-weight: $font-weight-normal;
-
     @media (min-width: $breakpoint-md) {
       font-size: $font-size-lg;
     }
@@ -95,58 +82,36 @@ $hero-background-overlay: rgba(33, 33, 33, 0.45);
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;
-
   @media (min-width: $breakpoint-xs) {
+    text-align: center;
+  }
+  #aprendizagem {
     text-align: center;
   }
 }
 
-// About
-.about-container {
-  margin: $margin-mobile;
-
-  @media (min-width: $breakpoint-xs) {
-    margin: $margin-tablet;
+.emd-logo {
+  height: 70px;
+  width: auto;
+  @media (min-width: $breakpoint-md){
+    height: 110px;
   }
+}
 
-  @media (min-width: $breakpoint-md) {
-    margin: $margin-laptop;
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    margin: $margin-desktop;
-  }
-
-  h1 {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    margin-bottom: $spacing-md;
-
-    @media (min-width: $breakpoint-sm) {
-      -webkit-text-stroke-width: 3px;
-      margin-bottom: $spacing-lg;
+.certification-logo-container {
+  display: flex;
+  margin: 1rem;
+  gap: $spacing-md;
+  align-self: center;
+  position: absolute;
+  bottom: 0;
+  img {
+    height: 35px;
+    width: auto;
+    @media(min-width: $breakpoint-md){
+      height: 50px;
     }
   }
 
-  p {
-    text-indent: 20px;
-    line-height: 20px;
-    font-weight: $font-weight-light;
 
-    @media (min-width: $breakpoint-sm) {
-      font-weight: $font-weight-normal;
-      line-height: normal;
-    }
-    &:not(:last-child) {
-      margin-bottom: $spacing-xs;
-    }
-  }
-
-  span {
-    font-weight: $font-weight-normal;
-
-    @media (min-width: $breakpoint-sm) {
-      font-weight: $font-weight-bold;
-    }
-  }
 }

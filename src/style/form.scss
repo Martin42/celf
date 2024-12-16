@@ -1,0 +1,191 @@
+@use "variables" as *;
+
+// Form
+@mixin container-style($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin input-style {
+  border-radius: 6px;
+  border: 0.632px solid #ababab;
+  box-shadow: 0px 2.529px 7.587px rgba(0, 0, 0, 0.04) inset;
+  font-size: $font-size-xs;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form-container {
+  @include container-style($spacing-xl);
+  margin: $margin-mobile;
+  margin-bottom: $spacing-xxl;
+
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+    margin-bottom: $spacing-desktop;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    align-self: center;
+    margin-bottom: $spacing-desktop;
+    width: 70vw;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin-bottom: $spacing-desktop;
+    width: 50vw;
+  }
+
+  article {
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    p {
+      text-indent: 20px;
+    }
+  }
+
+  button {
+    align-self: end;
+  }
+
+  form {
+    @include container-style($spacing-md);
+    margin-top: $spacing-xl;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  textarea,
+  select {
+    @include input-style;
+  }
+
+  input:not(.hidden-input) {
+    @include input-style;
+    min-height: 2rem;
+  }
+
+  span {
+    font-weight: $font-weight-normal;
+  }
+
+  textarea {
+    min-height: 6rem;
+    resize: vertical;
+  }
+
+  label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-light;
+  }
+}
+
+.input-container {
+  @include container-style($spacing-md);
+  @media (min-width: $breakpoint-md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .course-input-field {
+    @include container-style($spacing-xs);
+  }
+}
+
+.wanted-course-container {
+  input {
+    @include input-style();
+    background: #d8d8d8;
+  }
+}
+
+.file-upload-container,
+.wanted-course-container {
+  @include container-style($spacing-xs);
+}
+
+.file-upload-input {
+  min-height: 6rem;
+  position: relative;
+  cursor: pointer;
+  @include input-style();
+  span {
+    font-size: $font-size-sm;
+    color: $color-terciary;
+  }
+
+  &:has(.attached-files-placeholder) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mandatory-field-text {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+}
+
+// ATTACHMENTS
+
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.attached-files-placeholder {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+
+.attached-files-container {
+  @include container-style(0.75rem);
+  padding: 0.5rem;
+  button {
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+  }
+}
+
+.attached-files-content {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.add-more-files-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.2rem 0.5rem;
+}
+
+.add-more-files-button {
+  position: relative;
+  background: none;
+  border: none;
+  padding: unset;
+}
+
+.total-size-indicator {
+  font-size: $font-size-xs;
+}
+
+// ABOUT FORM
+
+.about-form div {
+  @include container-style($spacing-xs);
+}

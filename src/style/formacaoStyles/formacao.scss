@@ -1,0 +1,220 @@
+@use "../variables" as *;
+
+.formacao-container {
+  margin: $margin-mobile;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  @media (min-width: $breakpoint-xs) {
+    margin: $margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    align-self: center;
+    width: 70vw;
+    gap: $spacing-xl;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 50vw;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h4 {
+    margin: 0.5rem;
+  }
+
+  article {
+    font-size: $font-size-base;
+    font-style: normal;
+    font-weight: $font-weight-light;
+  }
+
+  p {
+    text-indent: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-secondary;
+    font-weight: $font-weight-normal;
+  }
+
+  span {
+    font-weight: $font-weight-normal;
+  }
+}
+
+.formacao-info-container {
+  @extend .formacao-container;
+}
+
+.formacao-courses-container {
+  @extend .formacao-container;
+  margin-bottom: $spacing-xxl;
+}
+
+// Collapsibles
+
+.collapsible-courses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: $border-radius-base;
+  border: 1px solid #e6e6e6;
+  p {
+    text-indent: unset;
+  }
+}
+
+.collapsible-courses-closed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 1rem;
+  padding: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (min-width: $breakpoint-md) {
+    margin: unset;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.collapsible-courses-open {
+  @extend .collapsible-courses-closed;
+}
+
+.Collapsible__contentInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $spacing-xl;
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    margin-top: 1.5rem;
+  }
+}
+
+// Courses
+.courses-card-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 16rem;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-base;
+  @media (min-width: $breakpoint-md) {
+    align-self: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  &:first-child {
+    margin-top: 2rem;
+    @media (min-width: $breakpoint-md) {
+      margin-top: unset;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 2rem;
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.courses-card-img {
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      $dimmer-background-overlay,
+      $dimmer-background-overlay
+    );
+  }
+
+  span {
+    color: white;
+    font-weight: $font-weight-bold;
+    position: absolute;
+    padding: 1rem 2rem;
+    z-index: 1;
+  }
+  img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    filter: blur(1.5px);
+    z-index: 0;
+  }
+}
+
+.courses-card-info {
+  display: flex;
+  min-height: 8rem;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: $spacing-md;
+  a {
+    align-self: flex-end;
+  }
+}
+
+.courses-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  p {
+    text-indent: unset;
+    font-weight: $font-weight-normal;
+  }
+  span {
+    font-size: $font-size-xs;
+    color: #4e4e4e;
+    font-weight: $font-weight-light;
+  }
+}
+
+.course-text {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  text-align: center;
+}
+
+.course-cost {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  margin: 0 0.5rem;
+}
+
+.objectives-toggle {
+  cursor: pointer;
+  color: $color-secondary;
+  font-weight: $font-weight-normal;
+  text-decoration: underline;
+  margin: 0.5rem 0;
+}
