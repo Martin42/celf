@@ -54,7 +54,7 @@ describe("Navbar Component", () => {
 
     openMenu();
 
-    const inicioLink = screen.getByText("Ínicio");
+    const inicioLink = screen.getByText("Início");
     const financiadaLink = screen.getByText("Formação Financiada");
     const naoFinanciadaLink = screen.getByText("Formação Não Financiada");
     const SobreNosLink = screen.getByText("Sobre Nós");
