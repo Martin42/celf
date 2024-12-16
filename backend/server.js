@@ -29,7 +29,7 @@ const app = express();
 // Handle CORS issues
 const cors = require("cors");
 const allowedOrigins = [
-  "https://your-frontend-live-url.com",
+  "https://www.celfcentrodeformacao.com/",
   "http://localhost:3000"
 ];
 
