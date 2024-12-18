@@ -17,11 +17,7 @@ export const Hero = () => {
         <picture>
           <source srcSet={tabletHomeUrl} media="(min-width: 426px)" />
           <source srcSet={desktopHomeUrl} media="(min-width: 768px)" />
-          <img
-            src={mobileHomeUrl}
-            alt="women working on laptop"
-            loading="lazy"
-          />
+          <img src={mobileHomeUrl} alt="women working on laptop" />
         </picture>
       </div>
 

@@ -29,7 +29,7 @@ const HeroImage = ({ urls, alt }) => (
   <picture>
     <source srcSet={urls.tablet} media="(min-width: 426px)" />
     <source srcSet={urls.desktop} media="(min-width: 768px)" />
-    <img src={urls.mobile} alt={alt} loading="lazy" />
+    <img src={urls.mobile} alt={alt} />
   </picture>
 );
 

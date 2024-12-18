@@ -14,11 +14,7 @@ export const AboutHero = () => {
         <picture>
           <source srcSet={tabletAboutUrl} media="(min-width: 426px)" />
           <source srcSet={desktopAboutUrl} media="(min-width: 768px)" />
-          <img
-            src={mobileAboutUrl}
-            alt="women working on laptop"
-            loading="lazy"
-          />
+          <img src={mobileAboutUrl} alt="women working on laptop" />
         </picture>
       </div>
       <div className="hero-content">
