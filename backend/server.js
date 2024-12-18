@@ -29,7 +29,7 @@ const app = express();
 // Handle CORS issues
 const cors = require("cors");
 const allowedOrigins = [
-  "https://www.celfcentrodeformacao.com/",
+  "https://www.celfcentrodeformacao.com",
   "http://localhost:3000"
 ];
 
@@ -39,10 +39,12 @@ app.use(
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(
+          new Error(`CORS policy: No access control for origin ${origin}`)
+        );
       }
     },
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
