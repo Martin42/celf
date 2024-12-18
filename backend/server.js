@@ -7,24 +7,31 @@ const {
   Recipient,
   Attachment
 } = require("mailersend");
+const path = require("path");
 
 // Configure rate limiter
 const rateLimit = require("express-rate-limit");
 const sendEmailRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // Limit each IP to 10 requests per windowMs
+  max: 10,
   message: {
     success: false,
     error: "Too many requests from this IP, please try again after 15 minutes."
   },
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: false // Disable the `X-RateLimit-*` headers
+  standardHeaders: true,
+  legacyHeaders: false
 });
 
 const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "..", "httpdocs")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "httpdocs", "index.html"));
+});
 
 // Handle CORS issues
 const cors = require("cors");
