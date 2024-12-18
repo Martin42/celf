@@ -27,11 +27,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "..", "httpdocs")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "httpdocs", "index.html"));
-});
+app.use(express.static(path.join(__dirname, "../httpdocs")));
 
 // Handle CORS issues
 const cors = require("cors");
@@ -140,6 +136,11 @@ app.post(
     }
   }
 );
+
+// Catch-all for React frontend routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../httpdocs", "index.html"));
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
