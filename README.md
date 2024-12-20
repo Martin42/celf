@@ -25,7 +25,7 @@ The website is hosted at: [CELF](https://www.celfcentrodeformacao.com/)
 
 - **Platform**: [Ping.pt](https://ping.pt)
 - **Deployment Process**:  
-  The website is deployed manually after building the optimized folder locally with 'npm run build'. The hosting service used allows Git integration but it's currently having deployment issues on their side which will be used once they fix them so the website can get updated as the Github repository gets new commits.
+  The website is deployed manually after building the optimized folder locally with 'npm run build'. The hosting service used allows Git integration but it's currently having deployment issues on their side. Once these get fixed, this feature will be used which will allow Ping to keep updating the website as changes happen in the repo!
 
 This setup will ensure a seamless and reliable deployment process.
 
