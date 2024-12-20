@@ -108,6 +108,7 @@ export const IdForm = (props) => {
               <FormField
                 key={field.label}
                 {...field}
+                value={formData[field.name]}
                 onChange={(e) => handleFormData(e, field.name)}
               />
             ))}

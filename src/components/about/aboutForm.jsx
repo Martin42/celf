@@ -21,9 +21,10 @@ export const Form = () => {
     // Call backend
     const response = await sendFormData(data);
     if (response.success) {
-      alert("Email sent successfully!");
+      alert("Formulário enviado com sucesso");
+      setUserInfo({});
     } else {
-      alert(response.error);
+      alert("Erro ao enviar o formulário:", response.error);
     }
   };
 
@@ -39,6 +40,7 @@ export const Form = () => {
             id="email"
             placeholder="example@gmail.com"
             autoComplete="email"
+            value={userInfo.email || ""}
             required
             onChange={(e) => handleFormData(e, "email")}
           />
@@ -50,6 +52,7 @@ export const Form = () => {
             name="question"
             id="question"
             placeholder="Escreva aqui a sua questão"
+            value={userInfo.question || ""}
             required
             onChange={(e) => handleFormData(e, "question")}
           ></textarea>

@@ -1,66 +1,43 @@
 # Project Name: Centro de Línguas e Formação | CELF
 
-This project is currently under development and is not yet fully functional. This website will serve as a platform to offer professional courses and showcase available training programms.
+This project is a fully functional website designed to offer professional courses and showcase available training programs. While the core features are complete, the website will continue to be maintained and refined, with potential new features rolling out to enhance its functionality.
 
 ## Table of Contents
 
 1. [Technologies Used](#technologies-used)
-2. [To-Do / Roadmap](#to-do--roadmap)
+2. [Deployment](#deployment)
 3. [Testing Strategy](#testing-strategy)
 4. [CI/CD Pipeline](#cicd-pipeline)
+5. [Future Plans](#future-plans)
 
 ## Technologies Used
 
-_Work in progress – Technologies to be documented here once finalized._
+- **Frontend**: React with SASS for styling.
+- **Backend**: ExpressJS and Node.js, serving data from static JSON files.
+- **Testing**: React Testing Library and Jest (currently focused on testing the navbar component, with plans to expand).
+- **CI/CD**: GitLab CI/CD pipeline for automated workflows.
 
-## To-Do / Roadmap
+## Deployment
 
-- [x] Implement basic navbar routing and respective tests
-- [x] Implement hero section
-- [x] Implement "Services" section
-- [x] Implement "FAQ" section
-- [x] Implement "Where to find us" Section
-- [x] Implement Footer
+The website is hosted at: [CELF](https://www.celfcentrodeformacao.com/)
 
-### Technical Aspects
+### Hosting Details
 
-- [ ] Implement tests for hero section
+- **Platform**: [Ping.pt](https://ping.pt)
+- **Deployment Process**:  
+  The website is deployed manually after building the optimized folder locally with 'npm run build'. The hosting service used allows Git integration but it's currently having deployment issues on their side. Once these get fixed, this feature will be used which will allow Ping to keep updating the website as changes happen in the repo!
+
+This setup will ensure a seamless and reliable deployment process.
 
 ## Testing Strategy
 
-This project includes a comprehensive testing strategy to ensure all interactive components, navigational elements, and design elements function correctly and maintain quality as development progresses.
+This project includes a growing testing strategy to ensure quality and reliability as features are added and refined.
 
-### Types of Tests
+### Current Testing Focus
 
-(WIP)
+- **Unit Tests**: Currently testing the navigation bar component to verify its functionality and responsiveness.
 
-- **Unit Tests**: Focused on individual components, such as the navigation bar. These tests ensure each component renders correctly and responds to user interactions (e.g., navbar link clicks).
-- **Integration Tests**: Testing interactions across multiple components to validate navigation flow and element visibility.
-- **Accessibility Tests**: Using tools like `axe-core` to verify compliance with accessibility standards.
-- **Responsive Design Tests**: Validating that core components display correctly across different screen sizes, including mobile and desktop.
+### Future Testing Plans
 
-### Running Tests
-
-- **To run all tests**: `npm run test`
-- **To run accessibility tests**: `npm run test:accessibility`
-
-## CI/CD Pipeline
-
-This project uses a CI/CD pipeline to automate testing and ensure code quality.
-
-### Pipeline Overview
-
-The CI/CD pipeline is designed to automate the following processes for each commit:
-
-1. **Code Quality and Formatting**: Checks for coding standards and formatting consistency using tools such as Prettier.
-2. **Automated Testing**: Runs unit, integration, and accessibility tests on each commit to ensure functionality and accessibility are preserved.
-3. **Build Validation**: Ensures the codebase builds successfully without errors.
-
-### Current Pipeline Setup
-
-- **Build and Test Jobs**: Every commit triggers a series of jobs to run all tests and validate the build process. If any test fails, the pipeline stops to maintain code quality.
-- **Deployment**: A deployment job will be added once the website reaches a stable, production-ready state.
-
----
-
-This setup ensures continuous integration and code quality throughout the development cycle. Future enhancements to the CI/CD pipeline will include automated deployment, pending project completion.
+- Additional unit tests for other key components.
+- Possible integration tests to ensure smooth navigation and data flow between components.

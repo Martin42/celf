@@ -7,7 +7,7 @@ export const IdHero = (props) => {
       <div className="clearer-hero-img-wrapper">
         <picture>
           <source srcSet={desktop} media="(min-width: 769px)" />
-          <img src={mobile} alt={nome} loading="lazy" />
+          <img src={mobile} alt={nome} />
         </picture>
       </div>
       <div className="hero-content">

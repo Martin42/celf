@@ -7,18 +7,19 @@ const {
   Recipient,
   Attachment
 } = require("mailersend");
+const path = require("path");
 
 // Configure rate limiter
 const rateLimit = require("express-rate-limit");
 const sendEmailRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // Limit each IP to 10 requests per windowMs
+  max: 10,
   message: {
     success: false,
     error: "Too many requests from this IP, please try again after 15 minutes."
   },
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: false // Disable the `X-RateLimit-*` headers
+  standardHeaders: true,
+  legacyHeaders: false
 });
 
 const dotenv = require("dotenv");
@@ -26,10 +27,12 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, "../httpdocs")));
+
 // Handle CORS issues
 const cors = require("cors");
 const allowedOrigins = [
-  "https://www.celfcentrodeformacao.com/",
+  "https://www.celfcentrodeformacao.com",
   "http://localhost:3000"
 ];
 
@@ -39,10 +42,12 @@ app.use(
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(
+          new Error(`CORS policy: No access control for origin ${origin}`)
+        );
       }
     },
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
@@ -131,6 +136,11 @@ app.post(
     }
   }
 );
+
+// Catch-all for React frontend routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../httpdocs", "index.html"));
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
