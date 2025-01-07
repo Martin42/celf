@@ -66,6 +66,12 @@
   filter: drop-shadow(-2px 1px 2.5px rgba(212, 54, 80, 0.4));
 }
 
+@supports (-webkit-touch-callout: none) {
+  .card-svg {
+    filter: none; /* Remove filter for iOS */
+  }
+}
+
 .card-button {
   display: flex;
   justify-content: center;

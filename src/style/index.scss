@@ -54,16 +54,18 @@ code {
 
 // Animations for main container
 
-// .main-container{
-//   transition: all 0.5s ease;
-//   animation: appear 0.5s;
-// }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-// @keyframes appear {
-//   from{
-//     opacity: 0;
-//   }
-//   to{
-//     opacity: 1;
-//   }
-// }
+.main-container > section {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 500ms ease-in forwards;
+}
