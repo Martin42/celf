@@ -19,12 +19,22 @@ export const Form = () => {
     }
 
     // Call backend
-    const response = await sendFormData(data);
-    if (response.success) {
-      alert("Formulário enviado com sucesso");
-      setUserInfo({});
-    } else {
-      alert("Erro ao enviar o formulário:", response.error);
+    try {
+      const response = await sendFormData(data);
+
+      if (response.success) {
+        alert("Formulário enviado com sucesso");
+        setUserInfo({});
+      } else {
+        alert(
+          `Erro ao enviar o formulário: ${response.error || "Ocorreu um erro desconhecido."}`
+        );
+      }
+    } catch (error) {
+      console.error("Error during API call:", error);
+      alert(
+        "Erro ao enviar o formulário: Por favor, tente novamente mais tarde."
+      );
     }
   };
 
