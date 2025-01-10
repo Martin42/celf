@@ -1,95 +1,111 @@
-import React, { useState } from "react";
-import inputFields from "../../data/inputFields.json";
-import { calculateTotalFileSize } from "../../utils/calculateTotalFileSize";
-import { FormField } from "./formField";
-import { sendFormData } from "../../services/api";
-import { Link } from "react-router-dom";
+import React from "react";
+// import inputFields from "../../data/inputFields.json";
+// import { calculateTotalFileSize } from "../../utils/calculateTotalFileSize";
+// import { FormField } from "./formField";
+// import { sendFormData } from "../../services/api";
+// import { Link } from "react-router-dom";
 import "../../style/privacyStyles/privacy.scss";
 
-const MAX_TOTAL_FILE_SIZE = 20 * 1024 * 1024; // 20MB
+// const MAX_TOTAL_FILE_SIZE = 20 * 1024 * 1024; // 20MB
 
 export const IdForm = (props) => {
   const { id, nome } = props.filteredCourses;
 
-  const [formData, setFormData] = useState(
-    inputFields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
-  );
+  // const [formData, setFormData] = useState(
+  //   inputFields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
+  // );
 
-  const [files, setFiles] = useState([]);
+  // const [files, setFiles] = useState([]);
 
-  const [approved, setApproved] = useState(false);
+  // const [approved, setApproved] = useState(false);
 
-  const handleApproved = (e) => {
-    setApproved(e.target.checked);
-  };
+  // const handleApproved = (e) => {
+  //   setApproved(e.target.checked);
+  // };
 
-  const handleFormData = (e, name) => {
-    setFormData((prevData) => ({ ...prevData, [name]: e.target.value }));
-  };
+  // const handleFormData = (e, name) => {
+  //   setFormData((prevData) => ({ ...prevData, [name]: e.target.value }));
+  // };
 
-  const addFiles = (event) => {
-    const newFiles = Array.from(event.target.files).map((file) => ({
-      id: Date.now() + Math.random(),
-      file
-    }));
-    setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-  };
+  // const addFiles = (event) => {
+  //   const newFiles = Array.from(event.target.files).map((file) => ({
+  //     id: Date.now() + Math.random(),
+  //     file
+  //   }));
+  //   setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (files.length > 0) {
-      const { totalSize, totalSizeInMB } = calculateTotalFileSize(files);
+  //   if (files.length > 0) {
+  //     const { totalSize, totalSizeInMB } = calculateTotalFileSize(files);
 
-      if (totalSize > MAX_TOTAL_FILE_SIZE) {
-        alert(
-          `O tamanho dos ficheiros anexados (${totalSizeInMB.toFixed(2)} MB) excede os 20MB.`
-        );
-        return;
-      }
-    }
+  //     if (totalSize > MAX_TOTAL_FILE_SIZE) {
+  //       alert(
+  //         `O tamanho dos ficheiros anexados (${totalSizeInMB.toFixed(2)} MB) excede os 20MB.`
+  //       );
+  //       return;
+  //     }
+  //   }
 
-    const data = new FormData();
-    data.append("Curso Pretendido", `${id} ${nome}`);
-    Object.keys(formData).forEach((key) => data.append(key, formData[key]));
-    files.forEach((file) => data.append("files", file.file));
+  //   const data = new FormData();
+  //   data.append("Curso Pretendido", `${id} ${nome}`);
+  //   Object.keys(formData).forEach((key) => data.append(key, formData[key]));
+  //   files.forEach((file) => data.append("files", file.file));
 
-    if (!approved) {
-      alert("Por favor aceite os termos de proteção de dados");
-      return;
-    }
+  //   if (!approved) {
+  //     alert("Por favor aceite os termos de proteção de dados");
+  //     return;
+  //   }
 
-    try {
-      // Call backend
-      const response = await sendFormData(data);
-      if (response.success) {
-        alert("Formulário enviado com sucesso");
+  //   try {
+  //     // Call backend
+  //     const response = await sendFormData(data);
+  //     if (response.success) {
+  //       alert("Formulário enviado com sucesso");
 
-        // Reset form data
-        setFormData(
-          inputFields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
-        );
-        setFiles([]);
-        setApproved(false);
-      } else {
-        alert(response.error);
-      }
-    } catch (error) {
-      console.error("Erro ao enviar o formulário:", error);
-      alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
-    }
-  };
+  //       // Reset form data
+  //       setFormData(
+  //         inputFields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
+  //       );
+  //       setFiles([]);
+  //       setApproved(false);
+  //     } else {
+  //       alert(response.error);
+  //     }
+  //   } catch (error) {
+  //     console.error("Erro ao enviar o formulário:", error);
+  //     alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
+  //   }
+  // };
 
-  const deleteFiles = (fileId) => {
-    setFiles((prevFiles) => prevFiles.filter((file) => file.id !== fileId));
-  };
+  // const deleteFiles = (fileId) => {
+  //   setFiles((prevFiles) => prevFiles.filter((file) => file.id !== fileId));
+  // };
 
-  const { totalSizeInMB } = calculateTotalFileSize(files);
+  // const { totalSizeInMB } = calculateTotalFileSize(files);
 
   return (
     <section className="form-container">
       <h2>PRÉ-INSCRIÇÃO</h2>
       <article>
+        <p>
+          Para efeitos de pré-inscrição no curso pretendido (UFCD {id} - {nome})
+          pedimos que nos contacte através do número de telefone{" "}
+          <b>227 130 875</b> ou que nos envie um email para
+          <b> formacelf@gmail.com</b> a manifestar o seu interesse nesta
+          formação.
+        </p>
+
+        <p>
+          A equipa do CELF está prontamente a trabalhar num formulário de
+          inscrição de formandos, mas até lá agradecemos que nos contacte
+          diretamente. Obrigado pela compreensão.
+        </p>
+      </article>
+
+      {/* <article>
         <p>
           No seguinte formulário poderá efetuar a pré-inscrição na formação
           pretendida. Para um processo mais rápido e simples pedimos que anexe
@@ -245,7 +261,7 @@ export const IdForm = (props) => {
             Submeter
           </button>
         </form>
-      </article>
+      </article> */}
     </section>
   );
 };

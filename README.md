@@ -1,6 +1,6 @@
 # Project Name: Centro de Línguas e Formação | CELF
 
-This project is a fully functional website designed to offer professional courses and showcase available training programs. While the core features are complete, the website will continue to be maintained and refined, with potential new features rolling out to enhance its functionality.
+First steps into freelancing work. This project is a fully functional website designed to offer professional courses and showcase available training programs. While the core features are complete, the website will continue to be maintained and refined, with potential new features rolling out to enhance its functionality.
 
 ## Table of Contents
 
